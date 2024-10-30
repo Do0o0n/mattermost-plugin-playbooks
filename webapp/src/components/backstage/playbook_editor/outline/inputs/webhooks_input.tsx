@@ -155,7 +155,7 @@ const TextArea = styled.textarea<TextAreaProps>`
     height: auto;
     width: 100%;
     padding: 10px 16px;
-
+font-weight: normal;
     background: var(--center-channel-bg);
     color: var(--center-channel-color);
     box-shadow: inset 0 0 0 1px rgba(var(--center-channel-color-rgb), 0.24);

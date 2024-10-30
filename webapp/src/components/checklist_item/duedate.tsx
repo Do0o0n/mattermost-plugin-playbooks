@@ -374,14 +374,14 @@ const isDueSoon = (date?: number) => {
 const ControlComponentAnchor = styled.a`
     display: inline-block;
     margin: 0 0 8px 12px;
-    font-weight: 600;
+    font-weight: normal;
     font-size: 12px;
     position: relative;
     top: -4px;
 `;
 
 const LabelRight = styled.div`
-    font-weight: 400;
+    
     font-size: 12px;
     line-height: 16px;
     color: rgba(var(--center-channel-color-rgb), 0.56);
@@ -404,8 +404,8 @@ const PlaceholderDiv = styled.div<{editable: boolean}>`
 const DueDateTextContainer = styled.div<{overdue: boolean}>`
     font-size: 12px;
     line-height: 15px;
-
-    font-weight: ${(props) => (props.overdue ? '600' : '400')};
+   font-weight: normal;
+    font-family: 'GraphikArabic';
 `;
 
 const CalendarIcon = styled.div<{overdueOrDueSoon: boolean}>`
@@ -450,6 +450,7 @@ const DueDateContainer = styled.div<{overdue: boolean, dueSoon: boolean, editabl
     ${({overdue, dueSoon}) => ((overdue || dueSoon) && css`
         background-color: rgba(var(--dnd-indicator-rgb), 0.08);
         color: var(--dnd-indicator);
+        font-weight: normal;
     `)}
 
     ${({editable}) => editable && css`

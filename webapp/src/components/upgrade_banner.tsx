@@ -75,14 +75,14 @@ const InfoContainer = styled.div<{ vertical?: boolean }>`
 
 const Title = styled.div`
     margin-bottom: 8px;
-    font-weight: 600;
+    font-weight: normal;
     font-size: 20px;
     line-height: 28px;
     color: var(--center-channel-color);
 `;
 
 const HelpText = styled.div`
-    font-weight: 400;
+    
     font-size: 12px;
     line-height: 16px;
     color: var(--center-channel-color);
@@ -91,7 +91,7 @@ const HelpText = styled.div`
 const FooterContainer = styled.div`
     margin-top: 18px;
 
-    font-weight: 400;
+    
     font-size: 11px;
     line-height: 16px;
     color: rgba(var(--center-channel-color-rgb), 0.56);

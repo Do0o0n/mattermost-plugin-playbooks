@@ -1,0 +1,210 @@
+[
+  {
+    "id": "app.command.execute.error",
+    "translation": "تعذر تنفيذ الأمر."
+  },
+  {
+    "id": "app.user.digest.overdue_status_updates.heading",
+    "translation": "التحديثات المتأخرة للحالة"
+  },
+  {
+    "id": "app.user.digest.overdue_status_updates.num_overdue",
+    "translation": {
+      "one": "لديك {{.Count}} قاعدة عمل متأخر للتحديث للحالة:",
+      "other": "لديك {{.Count}} قاعدة عمل متأخرة للتحديث للحالة:"
+    }
+  },
+  {
+    "id": "app.user.digest.overdue_status_updates.zero_overdue",
+    "translation": "ليس لديك قاعدة عمل متأخرة."
+  },
+  {
+    "id": "app.user.digest.runs_in_progress.heading",
+    "translation": "قواعد عمل جارية"
+  },
+  {
+    "id": "app.user.digest.runs_in_progress.num_in_progress",
+    "translation": {
+      "one": "لديك {{.Count}} قاعدة عمل جارية حاليًا:",
+      "other": "لديك {{.Count}} قاعدة عمل جارية حاليًا:"
+    }
+  },
+  {
+    "id": "app.user.digest.runs_in_progress.zero_in_progress",
+    "translation": "ليس لديك قاعدة عمل جارية حاليًا."
+  },
+  {
+    "id": "app.user.digest.tasks.all_tasks_command",
+    "translation": "يرجى استخدام `/playbook todo` لعرض جميع مهامك."
+  },
+  {
+    "id": "app.user.digest.tasks.due_after_today",
+    "translation": {
+      "one": "لديك **{{.Count}} مهمة مُسندة إليك يجب تنفيذهابعد اليوم**.",
+      "other": "لديك **{{.Count}} مهمة مُسندة إليك يجب تنفيذهابعد اليوم**."
+    }
+  },
+  {
+    "id": "app.user.digest.tasks.due_in_x_days",
+    "translation": {
+      "one": "ينجز حتى {{.Count}} يوم",
+      "other": "ينجز حتى {{.Count}} يوم"
+    }
+  },
+  {
+    "id": "app.user.digest.tasks.due_today",
+    "translation": "ينجز اليوم"
+  },
+  {
+    "id": "app.user.digest.tasks.due_x_days_ago",
+    "translation": "ينجز منذ {{.Count}} يوم"
+  },
+  {
+    "id": "app.user.digest.tasks.due_yesterday",
+    "translation": "ينجز بالأمس"
+  },
+  {
+    "id": "app.user.digest.tasks.heading",
+    "translation": "مهامك المُسندة إليك"
+  },
+  {
+    "id": "app.user.digest.tasks.num_assigned",
+    "translation": {
+      "one": "لديك {{.Count}} مهمة مُسندة إليك:",
+      "other": "لديك {{.Count}} مهمة مُسندة إليك إجمالًا:"
+    }
+  },
+  {
+    "id": "app.user.digest.tasks.num_assigned_due_until_today",
+    "translation": {
+      "one": "لديك {{.Count}} مهمة مُسندة إليك يجب تنفيذهاالآن:",
+      "other": "لديك {{.Count}} مهمة مُسندة إليك يجب تنفيذهاالآن:"
+    }
+  },
+  {
+    "id": "app.user.digest.tasks.zero_assigned",
+    "translation": "ليس لديك أي مهام مُسندة إليك."
+  },
+  {
+    "id": "app.user.new_run.intro",
+    "translation": "**المالك** {{.Username}}"
+  },
+  {
+    "id": "app.user.new_run.playbook",
+    "translation": "دليل قاعدة العمل"
+  },
+  {
+    "id": "app.user.new_run.run_name",
+    "translation": "اسم قاعدة العمل"
+  },
+  {
+    "id": "app.user.new_run.submit_label",
+    "translation": "تشغيل قاعدة العمل"
+  },
+  {
+    "id": "app.user.new_run.title",
+    "translation": "تشغيل دليل قاعدة العمل"
+  },
+  {
+    "id": "app.user.run.add_checklist_item.description",
+    "translation": "الوصف"
+  },
+  {
+    "id": "app.user.run.add_checklist_item.name",
+    "translation": "الاسم"
+  },
+  {
+    "id": "app.user.run.add_checklist_item.submit_label",
+    "translation": "إضافة مهمة"
+  },
+  {
+    "id": "app.user.run.add_checklist_item.title",
+    "translation": "إضافة مهمة جديدة"
+  },
+  {
+    "id": "app.user.run.add_to_timeline.playbook_run",
+    "translation": "تشغيل دليل قاعدة العمل"
+  },
+  {
+    "id": "app.user.run.add_to_timeline.submit_label",
+    "translation": "إضافة إلى جدول زمني للتشغيل"
+  },
+  {
+    "id": "app.user.run.add_to_timeline.summary",
+    "translation": "المُلخص"
+  },
+  {
+    "id": "app.user.run.add_to_timeline.summary.help",
+    "translation": "الحد الأقصى 64 حرف"
+  },
+  {
+    "id": "app.user.run.add_to_timeline.summary.placeholder",
+    "translation": "ملخص قصير يُظهر في الجدول الزمني"
+  },
+  {
+    "id": "app.user.run.add_to_timeline.title",
+    "translation": "إضافة إلى الجدول زمني للتشغيل"
+  },
+  {
+    "id": "app.user.run.confirm_finish.num_outstanding",
+    "translation": {
+      "one": "هناك **{{.Count}} مهمة قيد الانتظار**. هل أنت متأكد من رغبتك في إنهاء قاعدة العمل *{{.RunName}}* لجميع المشاركين؟",
+      "other": "هناك **{{.Count}} مهمة قيد الانتظار**. هل أنت متأكد من رغبتك في إنهاء قاعدة العمل *{{.RunName}}* لجميع المشاركين؟"
+    }
+  },
+  {
+    "id": "app.user.run.confirm_finish.submit_label",
+    "translation": "إنهاء قاعدة العمل"
+  },
+  {
+    "id": "app.user.run.confirm_finish.title",
+    "translation": "تأكيد إنهاء قاعدة العمل"
+  },
+  {
+    "id": "app.user.run.request_join_channel",
+    "translation": "@{{.Name}} هو مشارك في قاعدة العمل ويريد الانضمام إلى هذه المجموعة. يمكن لأي عضو في المجموعة دعوته.\n"
+  },
+  {
+    "id": "app.user.run.request_update",
+    "translation": "@here — طلب @{{.Name}} تحديث حالة قاعدة العمل [{{.RunName}}]({{.RunURL}}). \n"
+  },
+  {
+    "id": "app.user.run.status_disable",
+    "translation": "@{{.Username}} عطل تحديثات الحالة للتشغيل [{{.RunName}}]({{.RunURL}})"
+  },
+  {
+    "id": "app.user.run.status_enable",
+    "translation": "@{{.Username}} فعّل تحديثات الحالة للتشغيل [{{.RunName}}]({{.RunURL}})"
+  },
+  {
+    "id": "app.user.run.update_status.change_since_last_update",
+    "translation": "التغيير منذ آخر تحديث"
+  },
+  {
+    "id": "app.user.run.update_status.finish_run",
+    "translation": "إنهاء قاعدة العمل"
+  },
+  {
+    "id": "app.user.run.update_status.finish_run.placeholder",
+    "translation": "قم أيضًا بوضع علامة على قاعدة العمل على أنه مُنهى"
+  },
+  {
+    "id": "app.user.run.update_status.num_channel",
+    "translation": {
+      "one": "قم بتقديم تحديث لأصحاب المصلحة. سيتم بث هذه الرسالة إلى {{.Count}} مجموعة.",
+      "other": "قم بتقديم تحديث لأصحاب المصلحة. سيتم بث هذه الرسالة إلى {{.Count}} مجموعة."
+    }
+  },
+  {
+    "id": "app.user.run.update_status.reminder_for_next_update",
+    "translation": "تذكير للتحديث التالي"
+  },
+  {
+    "id": "app.user.run.update_status.submit_label",
+    "translation": "تحديث الحالة"
+  },
+  {
+    "id": "app.user.run.update_status.title",
+    "translation": "تحديث الحالة"
+  }
+]

@@ -167,7 +167,7 @@ const Cell = styled.div`
 
 const Title = styled.div`
     margin-bottom: 4px;
-    font-weight: 600;
+    font-weight: normal;
     font-size: 14px;
     line-height: 20px;
     color: rgba(var(--center-channel-color-rgb), 0.72);
@@ -176,11 +176,11 @@ const Title = styled.div`
 const Value = styled.div`
     font-size: 20px;
     line-height: 24px;
-    font-weight: 600;
+    font-weight: normal;
 `;
 
 const ValueTo = styled.span`
-    font-weight: 400;
+    
 `;
 
 const Row = styled.div`

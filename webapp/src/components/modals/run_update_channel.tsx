@@ -95,6 +95,8 @@ const StyledGenericModal = styled(GenericModal)`
         }
         .modal-content {
             padding: 0px;
+            width: auto !important;
+            overflow: inherit !important;
         }
         .modal-body {
             padding: 10px 31px;

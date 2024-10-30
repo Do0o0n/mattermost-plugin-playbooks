@@ -1,11 +1,11 @@
 import {css} from 'styled-components';
 
 export const RegularHeading = css`
-    font-family: Metropolis, sans-serif;
-    font-weight: 300;
+    font-family: 'GraphikArabic';
+    font-weight: normal;
 `;
 
 export const SemiBoldHeading = css`
-    font-family: Metropolis, sans-serif;
-    font-weight: 600;
+   font-family: 'GraphikArabic';
+    font-weight: normal;
 `;

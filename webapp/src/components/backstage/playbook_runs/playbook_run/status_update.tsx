@@ -311,7 +311,10 @@ const Placeholder = styled.i`
 `;
 
 const Kebab = styled.div`
-    margin-left: 8px;
+html[dir="ltr"] & {
+    margin-left: 8px;}
+    html[dir="rtl"] & {
+    margin-right: 8px;}
     display: flex;
 `;
 
@@ -347,7 +350,7 @@ const DueDateParticipant = styled.div<{type: dueType}>`
     font-size: 14px;
     line-height:20px;
     color: ${({type}) => (type === dueType.Overdue ? 'var(--dnd-indicator)' : 'rgba(var(--center-channel-color-rgb), 0.72)')};
-    font-weight: 600;
+    font-weight: normal;
     display: flex;
     margin-right: 5px;
 `;
@@ -361,7 +364,11 @@ const IconClock = styled(Clock)<{type: dueType, size: number}>`
 const DueDateViewer = styled(DueDateParticipant)`
     font-size: 12px;
     line-height: 9.5px;
-    margin-right: 10px;
+    html[dir="ltr"] & { 
+       margin-right: 10px;;}
+         html[dir="rtl"] & { 
+        margin-left: 10px;}
+    
 
 `;
 
@@ -462,7 +469,7 @@ const ViewAllUpdates = styled.div`
     font-size: 11px;
     cursor: pointer;
     color: var(--button-bg);
-    font-weight: 600;
+    font-weight: normal;
     width: fit-content;
 `;
 

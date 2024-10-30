@@ -62,7 +62,7 @@ export default function SearchInput(props: Props) {
 
 export const Search = styled.div<{width?: string}>`
     position: relative;
-    font-weight: 400;
+    
 
     input {
         -webkit-transition: all 0.15s ease;
@@ -76,8 +76,9 @@ export const Search = styled.div<{width?: string}>`
         width: ${(props) => (props.width ? props.width : '360px')};
         height: 4rem;
         font-size: 14px;
-        font-family: 'Open Sans', sans-serif;
+        font-family: 'GraphikArabic';
         padding-left: 4rem;
+        font-weight: normal;
 
         &:focus {
             box-shadow: inset 0 0 0 1px var(--button-bg);
@@ -106,8 +107,10 @@ const ClearButton = styled.i`
 const ClearButtonContainer = styled.div`
     display: flex;
     position: absolute;
-    right: 10px;
+   
     top: 0px;
     height: 100%;
     align-items: center;
+      html[dir="ltr"] & {  right: 10px;}
+      html[dir="rtl"] & {  left: 30px;}
 `;

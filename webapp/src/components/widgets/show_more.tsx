@@ -22,6 +22,7 @@ interface TextContainerProps {
 const OuterContainer = styled.div`
     position: relative;
     overflow: hidden;
+    font-weight: normal;
 `;
 
 const TextContainer = styled.div<TextContainerProps>`
@@ -84,7 +85,7 @@ const ShowMoreButton = styled.button`
     display: inline-flex;
     flex-shrink: 0;
     font-size: 13px;
-    font-weight: bold;
+    font-weight: normal;
     line-height: 24px;
     margin: 0 8px;
     padding: 0 8px;

@@ -103,7 +103,10 @@ const HoverMenuContainer = styled.div`
     padding: 0px 8px;
     position: absolute;
     height: 32px;
-    right: 2px;
+    html[dir="ltr"] & {
+    right: 2px;}
+     html[dir="rtl"] & {
+    left: 2px;}
     top: 8px;
     z-index: 1;
 `;
@@ -114,7 +117,6 @@ const commonTextStyle = css`
     border-radius: var(--markdown-textbox-radius, 4px);
     font-size: 14px;
     line-height: 20px;
-    font-weight: 400;
     color: rgba(var(--center-channel-color-rgb), 0.72);
     padding: var(--markdown-textbox-padding, 12px 30px 12px 16px);
 

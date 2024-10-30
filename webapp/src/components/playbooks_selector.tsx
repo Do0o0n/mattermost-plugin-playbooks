@@ -221,7 +221,7 @@ const WrappedPlaybooksSelector = (props: Props) => {
 export default WrappedPlaybooksSelector;
 
 const Dot = styled.span`
-    font-weight: 600;
+    font-weight: normal;
     margin: 0 5px;
     font-size: 18px;
     ::before {
@@ -237,9 +237,12 @@ const Container = styled.div`
 const GroupTitle = styled.div`
     font-size:  12px;
     line-height: 16px;
-    font-weight: 600;
+    font-weight: normal;
     color: rgba(var(--center-channel-color-rgb), 0.64);
     text-transform: uppercase;
+      html[dir="rtl"] & { 
+      padding-right: 14px;
+      }
 `;
 const Group = styled.div`
     display: flex;
@@ -278,7 +281,7 @@ const ItemCenter = styled.div`
 const ItemTitle = styled.div`
     font-size:  14px;
     line-height: 20px;
-    font-weight: 400;
+    
     color: var(--center-channel-color);
     margin-bottom: 4px;
 `;
@@ -287,13 +290,17 @@ const ItemSubTitle = styled.div`
     align-items: center;
     font-size:  12px;
     line-height: 16px;
-    font-weight: 400;
+    
     color: rgba(var(--center-channel-color-rgb), 0.56);
 `;
 
 const ButtonWrappper = styled.div`
+    html[dir="ltr"] & { 
     margin-left: auto;
-    margin-right: 10px;
+    margin-right: 10px;}
+    html[dir="rtl"] & { 
+    margin-left: 10px;
+    margin-right: auto;}
     display: none;
 `;
 
@@ -307,14 +314,14 @@ const ErrorContainer = styled(Container)`
 
 const ErrorTitle = styled.div`
     font-size: 18px;
-    font-weight: 600;
+    font-weight: normal;
     color: var(--center-channel-color);
     text-align: center;
 `;
 
 const ErrorSubTitle = styled(ErrorTitle)`
     font-size: 14px;
-    font-weight: 400;
+    
 `;
 
 const Plus = styled(PlusIcon)`

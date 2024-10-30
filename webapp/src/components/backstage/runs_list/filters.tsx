@@ -32,7 +32,7 @@ const searchDebounceDelayMilliseconds = 300;
 const ControlComponentAnchor = styled.a`
     display: inline-block;
     margin: 0 0 8px 12px;
-    font-weight: 600;
+    font-weight: normal;
     font-size: 12px;
     position: relative;
     top: -4px;

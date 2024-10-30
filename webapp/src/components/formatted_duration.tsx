@@ -45,6 +45,13 @@ export const formatDuration = (value: Duration, style: FormatStyle = 'narrow', t
         return isNegative ? `-${str}` : str;
     }
 
+    // ضمان وجود جميع الوحدات في `localValue`
+    UNITS.forEach((unit) => {
+        if (localValue.get(unit) === undefined) {
+            localValue = localValue.set({[unit]: 0});
+        }
+    });
+
     const duration = localValue.shiftTo(...UNITS).normalize();
     const formatUnits = truncate === 'truncate' ? [UNITS.find((unit) => duration.get(unit) > 0)!] : UNITS.filter((unit) => duration.get(unit) > 0);
 
@@ -65,7 +72,16 @@ const FormattedDuration = ({from, to = 0, style, truncate}: DurationProps) => {
 
     const start = typeof from === 'number' ? DateTime.fromMillis(from) : from;
     const end = typeof to === 'number' ? DateTime.fromMillis(to || now.valueOf()) : to;
-    const duration = Interval.fromDateTimes(start, end).toDuration(['years', 'days', 'hours', 'minutes']);
+
+    // إنشاء Duration جديد يتضمن جميع الوحدات الأساسية لتجنب undefined
+    const durationValues = Interval.fromDateTimes(start, end).toDuration(['years', 'days', 'hours', 'minutes']).toObject();
+    const duration = Duration.fromObject({
+        years: durationValues.years || 0,
+        days: durationValues.days || 0,
+        hours: durationValues.hours || 0,
+        minutes: durationValues.minutes || 0,
+    });
+
     return (
         <div className='time'>{formatDuration(duration, style, truncate)}</div>
     );

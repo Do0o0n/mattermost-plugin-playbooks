@@ -167,7 +167,6 @@ const ChecklistContainer = styled.div`
 
 const AddTaskLink = styled.button`
     font-size: 14px;
-    font-weight: 400;
     line-height: 20px;
     height: 44px;
     width: 100%;

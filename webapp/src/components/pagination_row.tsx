@@ -21,7 +21,7 @@ const Count = styled.span`
 `;
 
 const Button = styled.button`
-    font-weight: bold;
+    font-weight: normal;
 `;
 
 interface Props {

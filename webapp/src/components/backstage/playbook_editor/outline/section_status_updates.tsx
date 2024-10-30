@@ -140,10 +140,10 @@ const StatusUpdates = ({playbook}: Props) => {
 };
 
 const StatusUpdatesContainer = styled.div`
-    font-weight: 400;
     font-size: 14px;
     line-height: 2.5rem;
     color: var(--center-channel-color-72);
+    font-family: 'GraphikArabic';
 `;
 
 const StatusUpdatesTextContainer = styled.div`
@@ -156,7 +156,9 @@ const Picker = styled.span`
     background: rgba(var(--button-bg-rgb), 0.08);
     border-radius: 12px;
     line-height: 15px;
-    padding: 3px 3px 3px 10px;
+       html[dir="ltr"] & {
+    padding: 3px 3px 3px 10px;}
+       html[dir="rtl"] & {padding: 3px 10px 3px 3px}
 `;
 
 const Template = styled.div`
@@ -197,7 +199,7 @@ const SelectorRightIcon = styled.i`
 `;
 
 const TextContainer = styled.span`
-    font-weight: 600;
+    font-weight: normal;
     font-size: 13px;
 `;
 

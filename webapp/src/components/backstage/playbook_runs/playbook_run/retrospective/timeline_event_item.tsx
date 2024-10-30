@@ -61,7 +61,7 @@ const TimeStamp = styled.time`
     font-size: 11px;
     margin: 0px;
     line-height: 1;
-    font-weight: 500;
+    font-weight: normal;
     svg {
         vertical-align: middle;
         margin: 0px 3px;
@@ -101,7 +101,7 @@ const SummaryContainer = styled.div`
 
 const SummaryTitle = styled.div<{deleted: boolean, postIdExists: boolean}>`
     font-size: 12px;
-    font-weight: 600;
+    font-weight: normal;
 
     ${({deleted, postIdExists}) => (deleted ? css`
         text-decoration: line-through;

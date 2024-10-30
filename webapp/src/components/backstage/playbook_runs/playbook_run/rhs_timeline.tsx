@@ -118,7 +118,7 @@ const Filters = styled.div`
 
 const FilterText = styled.div`
     font-size: 12px;
-    font-weight: 600;
+    font-weight: normal;
     color: rgba(var(--center-channel-color-rgb), 0.64);
 `;
 
@@ -132,9 +132,11 @@ const Body = styled.div`
 `;
 
 export const ItemList = styled.ul`
-    padding: 0 0 40px 0;
+ html[dir="ltr"] & {
+    padding: 0 0 40px 0;}
     list-style: none;
     position: relative;
+    font-family: 'GraphikArabic';
 
     :before {
         content: '';
@@ -153,7 +155,7 @@ const FakeButton = styled.div`
     color: var(--button-bg);
     background: var(--button-color-rgb);
     padding: 5px 10px;
-    font-weight: 600;
+    font-weight: normal;
     font-size: 11px;
     transition: all 0.15s ease-out;
 

@@ -88,7 +88,9 @@ const Container = styled.div<{isOpen: boolean}>`
     flex-direction: column;
     border-left: 1px solid rgba(var(--center-channel-color-rgb), 0.08);
     right: 0;
+    border: var(--border-light);
     background-color: var(--center-channel-bg);
+    color: var(--center-channel-color);
 `;
 
 const Header = styled.div`
@@ -117,11 +119,14 @@ const HeaderTitle = styled.div`
     margin: auto 0;
     line-height: 32px;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: normal;
     color: var(--center-channel-color);
     white-space: nowrap;
     :first-child {
-        margin-left: 20px;
+     html[dir="ltr"] & { 
+        margin-left: 20px;}
+         html[dir="rtl"] & { 
+        margin-right: 20px;}
     }
 `;
 

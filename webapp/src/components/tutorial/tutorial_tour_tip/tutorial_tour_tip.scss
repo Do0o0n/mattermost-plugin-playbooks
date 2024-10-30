@@ -129,10 +129,10 @@
             flex-grow: 1;
             order: 0;
             margin: 0;
-            font-family: inherit;
+            font-family: 'GraphikArabic';
             font-size: 1.4rem;
             font-style: normal;
-            font-weight: 600;
+            font-weight: normal;
             line-height: 2rem;
         }
 
@@ -148,7 +148,7 @@
             background: transparent;
             border-radius: 4px;
             color: rgba(var(--center-channel-color-rgb), 0.56);
-            font-weight: 600;
+            font-weight: normal;
 
             &:hover {
                 background: rgba(var(--center-channel-color-rgb), 0.08);
@@ -208,10 +208,11 @@
         height: 3.2rem;
         align-items: center;
         padding: 10px 16px;
+        font-weight: normal;
         border: none;
         border-radius: 4px;
         font-size: 12px;
-        font-weight: 600;
+        font-weight: normal;
         line-height: 12px;
     }
 

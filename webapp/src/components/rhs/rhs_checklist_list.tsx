@@ -41,7 +41,6 @@ import {ButtonsFormat as ItemButtonsFormat} from 'src/components/checklist_item/
 import {PrimaryButton, TertiaryButton} from 'src/components/assets/buttons';
 import TutorialTourTip, {useMeasurePunchouts, useShowTutorialStep} from 'src/components/tutorial/tutorial_tour_tip';
 import {RunDetailsTutorialSteps, TutorialTourCategories} from 'src/components/tutorial/tours';
-import GiveFeedbackButton from 'src/components/give_feedback_button';
 
 interface Props {
     playbookRun: PlaybookRun;
@@ -64,17 +63,6 @@ const StyledTertiaryButton = styled(TertiaryButton)`
 const StyledPrimaryButton = styled(PrimaryButton)`
     display: inline-block;
     margin: 12px 0;
-`;
-
-const RHSGiveFeedbackButton = styled(GiveFeedbackButton)`
-    && {
-        color: var(--center-channel-color-64);
-    }
-
-    &&:hover:not([disabled]) {
-        color: var(--center-channel-color-72);
-        background-color: var(--center-channel-color-08);
-    }
 `;
 
 const allComplete = (checklists: Checklist[]) => {
@@ -286,7 +274,7 @@ const RHSChecklistList = ({id, playbookRun, parentContainer, readOnly, onReadOnl
                     {formatMessage({defaultMessage: 'Finish run'})}
                 </FinishButton>
             }
-            <RHSGiveFeedbackButton/>
+            {/* <RHSGiveFeedbackButton/> */}
             {showRunDetailsChecklistsStep && (
                 <TutorialTourTip
                     title={<FormattedMessage defaultMessage='Track progress and ownership'/>}
@@ -313,7 +301,7 @@ const InnerContainer = styled.div<{parentContainer?: ChecklistParent}>`
 
     display: flex;
     flex-direction: column;
-
+font-family: 'GraphikArabic';
     ${({parentContainer}) => parentContainer !== ChecklistParent.RunDetails && `
         padding: 0 12px 24px 12px;
 
@@ -364,7 +352,7 @@ const IconWrapper = styled.div`
 `;
 
 const OverdueTasksToggle = styled.div<{toggled: boolean}>`
-    font-weight: 600;
+    font-weight: normal;
     font-size: 12px;
     line-height: 16px;
     display: inline-block;
@@ -397,7 +385,7 @@ const overdueTasks = (checklists: Checklist[]) => {
 const makeFilterOptions = (filter: ChecklistItemsFilter, name: string): CheckboxOption[] => {
     return [
         {
-            display: 'All tasks',
+            display: 'جميع المهام',
             value: 'all',
             selected: filter.all,
             disabled: false,
@@ -408,16 +396,16 @@ const makeFilterOptions = (filter: ChecklistItemsFilter, name: string): Checkbox
         },
         {
             value: 'title',
-            display: 'TASK STATE',
+            display: 'حالة المهمة',
         },
         {
-            display: 'Show checked tasks',
+            display: 'عرض المهام المحددة',
             value: 'checked',
             selected: filter.checked,
             disabled: filter.all,
         },
         {
-            display: 'Show skipped tasks',
+            display: 'عرض المهام التي لم يتم إنجازها',
             value: 'skipped',
             selected: filter.skipped,
             disabled: filter.all,
@@ -428,22 +416,22 @@ const makeFilterOptions = (filter: ChecklistItemsFilter, name: string): Checkbox
         },
         {
             value: 'title',
-            display: 'ASSIGNEE',
+            display: 'المكلف',
         },
         {
-            display: `Me (${name})`,
+            display: `أنا (${name})`,
             value: 'me',
             selected: filter.me,
             disabled: filter.all,
         },
         {
-            display: 'Unassigned',
+            display: 'غير مكلف',
             value: 'unassigned',
             selected: filter.unassigned,
             disabled: filter.all,
         },
         {
-            display: 'Others',
+            display: 'آخرون',
             value: 'others',
             selected: filter.others,
             disabled: filter.all,

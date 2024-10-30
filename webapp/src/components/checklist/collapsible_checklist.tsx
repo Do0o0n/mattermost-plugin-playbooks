@@ -174,6 +174,8 @@ const Border = styled.div`
     margin-bottom: 12px;
     background-color: rgba(var(--center-channel-color-rgb), 0.04);
     border-radius: 4px;
+    font-weight: normal;
+    font-family: 'GraphikArabic';
 `;
 
 const ProgressBackground = styled.div`
@@ -235,7 +237,7 @@ const Icon = styled.i`
 const Title = styled.div`
     margin: 0 6px 0 0;
 
-    font-weight: 600;
+    font-weight: normal;
     font-size: 14px;
     line-height: 44px;
     overflow: hidden;
@@ -251,7 +253,7 @@ const Title = styled.div`
 export const TitleHelpTextWrapper = styled.div`
     margin-right: 16px;
 
-    font-weight: 600;
+    font-weight: normal;
     font-size: 12px;
     white-space: nowrap;
     color: rgba(var(--center-channel-color-rgb), 0.48);
@@ -328,11 +330,11 @@ const ChecklistInput = styled.input`
     width: 100%;
     padding: 0 10px;
 
-    font-weight: 600;
+    font-weight: normal;
     font-size: 14px;
 
     ::placeholder {
-        font-weight: 400;
+        
         font-style: italic;
     }
 `;

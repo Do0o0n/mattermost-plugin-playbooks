@@ -50,7 +50,7 @@ const ReportContainer = styled.div`
 `;
 
 const Title = styled.div`
-    font-weight: 600;
+    font-weight: normal;
     font-size: 14px;
 `;
 

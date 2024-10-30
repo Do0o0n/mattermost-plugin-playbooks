@@ -305,7 +305,8 @@ const MainWrapper = styled.div`
 
 const Main = styled.main`
     min-height: 0;
-    padding: 0 20px 60px;
+     html[dir="ltr"] & {
+    padding: 0 20px 60px;}
     display: grid;
     overflow-y: auto;
     place-content: start center;

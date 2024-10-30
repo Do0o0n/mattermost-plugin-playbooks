@@ -1,7 +1,7 @@
 import styled, {css} from 'styled-components';
 
 const BackstageListHeader = styled.div<{$edgeless?: boolean}>`
-    font-weight: 600;
+    font-weight: normal;
     padding: 0 1.6rem;
     font-size: 14px;
     line-height: 4rem;

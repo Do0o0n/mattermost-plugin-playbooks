@@ -1,0 +1,17 @@
+
+.Buttons{
+    background: #00987e;
+    color: var(--button-color);
+    white-space: nowrap;
+    border: none;
+    border-radius: 4px;
+    padding: 7px;
+}
+.faa {
+    margin-right: 7px;
+    font-size: 1.1em;
+    font-weight: bold;
+    html[dir="rtl"] & {
+        transform: rotate(179deg);
+        padding-right: 8px;
+    }}

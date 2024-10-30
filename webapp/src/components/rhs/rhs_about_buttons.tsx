@@ -128,7 +128,8 @@ const PlaybookInfo = styled.div`
 const PlaybookName = styled.div`
     color: rgba(var(--center-channel-color-rgb), 0.56);
     font-size: 12px;
-
+    font-weight: normal;
+    font-family: 'GraphikArabic';
     max-width: 162px;
     overflow: hidden;
     text-overflow: ellipsis;

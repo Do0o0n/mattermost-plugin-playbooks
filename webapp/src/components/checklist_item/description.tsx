@@ -111,7 +111,7 @@ const StyledMarkdownTextbox = styled(MarkdownTextbox)`
 const ChecklistItemDescriptionContainer = styled.div`
     font-size: 12px;
     font-style: normal;
-    font-weight: 400;
+        font-family: 'GraphikArabic';
     line-height: 16px;
     color: rgba(var(--center-channel-color-rgb), 0.72);
     padding-right: 8px;

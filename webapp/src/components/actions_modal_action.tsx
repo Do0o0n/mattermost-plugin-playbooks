@@ -56,6 +56,7 @@ const Container = styled.div<{clickable: boolean}>`
 const Title = styled.label<{clickable: boolean}>`
     font-weight: normal;
     font-size: 14px;
+    font-family: 'GraphikArabic';
     cursor: ${({clickable}) => (clickable ? 'pointer' : 'default')};
 `;
 

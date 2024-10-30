@@ -58,7 +58,6 @@ const ConfirmModal = styled(GenericModal)`
 `;
 
 const ConfirmModalTitle = styled.h1`
-    font-family: Metropolis;
     font-size: 22px;
     line-height: 28px;
     margin-top: 0;

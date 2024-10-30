@@ -85,7 +85,7 @@ const InputContainer = styled.div`
 `;
 
 const Title = styled.div`
-    font-weight: 600;
+    font-weight: normal;
 
     :after {
         content: attr(data-end);

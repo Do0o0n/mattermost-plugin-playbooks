@@ -10,7 +10,7 @@ import styled from 'styled-components';
 import {LightningBoltOutlineIcon} from '@mattermost/compass-icons/components';
 
 import GenericModal, {DefaultFooterContainer, ModalSubheading} from 'src/components/widgets/generic_modal';
-
+import './styls.scss';
 interface Props {
     id: string;
     title: React.ReactNode;
@@ -56,29 +56,31 @@ const ActionsModal = (props: Props) => {
     };
 
     return (
-        <StyledModal
-            id={props.id}
-            modalHeaderText={header}
-            show={props.show}
-            onHide={props.onHide}
-            onExited={() => {/* do nothing else after the modal has exited */}}
-            handleCancel={props.editable ? props.onHide : null}
-            handleConfirm={onHandleConfirm()}
-            confirmButtonText={formatMessage({defaultMessage: 'Save'})}
-            cancelButtonText={formatMessage({defaultMessage: 'Cancel'})}
-            isConfirmDisabled={!props.editable}
-            confirmButtonClassName={props.isValid ? '' : 'disabled'}
-            isConfirmDestructive={false}
-            autoCloseOnCancelButton={true}
-            autoCloseOnConfirmButton={props.autoCloseOnConfirmButton ?? false}
-            enforceFocus={true}
-            components={{
-                Header: ModalHeader,
-                FooterContainer: ModalFooter,
-            }}
-        >
-            {props.children}
-        </StyledModal>
+        <div className='a11y__modals'>
+            <StyledModal
+                id={props.id}
+                modalHeaderText={header}
+                show={props.show}
+                onHide={props.onHide}
+                onExited={() => {/* do nothing else after the modal has exited */}}
+                handleCancel={props.editable ? props.onHide : null}
+                handleConfirm={onHandleConfirm()}
+                confirmButtonText={formatMessage({defaultMessage: 'Save'})}
+                cancelButtonText={formatMessage({defaultMessage: 'Cancel'})}
+                isConfirmDisabled={!props.editable}
+                confirmButtonClassName={props.isValid ? '' : 'disabled'}
+                isConfirmDestructive={false}
+                autoCloseOnCancelButton={true}
+                autoCloseOnConfirmButton={props.autoCloseOnConfirmButton ?? false}
+                enforceFocus={true}
+                components={{
+                    Header: ModalHeader,
+                    FooterContainer: ModalFooter,
+                }}
+            >
+                {props.children}
+            </StyledModal>
+        </div>
     );
 };
 
@@ -97,7 +99,7 @@ const StyledModal = styled(GenericModal)`
 `;
 
 const ModalTitle = styled.div`
-    font-weight: 600;
+    font-weight: normal;
     font-size: 20px;
     line-height: 20px;
     margin-top: 4px;

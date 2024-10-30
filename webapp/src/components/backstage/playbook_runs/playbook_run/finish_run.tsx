@@ -135,6 +135,8 @@ const Text = styled.div`
     line-height: 20px;
     color: rgba(var(--center-channel-color-rgb), 0.72);
     display: flex;
+    font-weight: normal;
+    font-family: 'GraphikArabic';
 `;
 
 const RightWrapper = styled.div`

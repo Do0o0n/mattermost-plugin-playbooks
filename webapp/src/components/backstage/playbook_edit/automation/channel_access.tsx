@@ -183,6 +183,7 @@ const HorizontalSplit = styled.div`
 
 export const ButtonLabel = styled.label<{disabled: boolean}>`
     padding: 10px 16px;
+    font-weight: normal;
     border: 1px solid rgba(var(--center-channel-color-rgb), 0.16);
     background: ${({disabled}) => (disabled ? 'rgba(var(--center-channel-color-rgb), 0.04)' : 'var(--center-channel-bg)')};
     border-radius: 4px;
@@ -203,7 +204,7 @@ const Icon = styled.i<{ active?: boolean, disabled: boolean }>`
 const BigText = styled.div`
     font-size: 14px;
     line-height: 20px;
-    font-weight: 400;
+    
 `;
 
 const ChannelActionButton = styled(SecondaryButtonLarger)`

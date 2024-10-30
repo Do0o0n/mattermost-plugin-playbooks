@@ -32,9 +32,9 @@ const Item = styled.div`
 `;
 
 const Title = styled.h5`
-    font-family: Open Sans;
+   font-family: 'GraphikArabic';
     font-style: normal;
-    font-weight: 600;
+    font-weight: normal;
     font-size: 14px;
     line-height: 20px;
     margin-top: 0;
@@ -50,6 +50,8 @@ const Title = styled.h5`
             overflow: hidden;
             text-overflow: ellipsis;
             display: inline-block;
+            font-weight: normal;
+            font-family: 'GraphikArabic';
         }
         svg {
             opacity: 0;
@@ -73,7 +75,7 @@ const Title = styled.h5`
 `;
 
 const Sub = styled.span`
-    font-family: Open Sans;
+    font-family: 'GraphikArabic';
     font-size: 12px;
     line-height: 16px;
     color: rgba(var(--center-channel-color-rgb), 0.72);
@@ -84,7 +86,7 @@ const Sub = styled.span`
         font-size: 2rem;
         line-height: 12px;
         vertical-align: middle;
-        font-weight: 600;
+        font-weight: normal;
     }
 `;
 
@@ -93,8 +95,8 @@ const Meta = styled.div`
 `;
 
 export const MetaItem = styled(PillBox)`
-    font-family: Open Sans;
-    font-weight: 600;
+    font-family: 'GraphikArabic';
+    font-weight: normal;
     font-size: 11px;
     line-height: 10px;
     height: 20px;
@@ -113,7 +115,7 @@ export const MetaItem = styled(PillBox)`
         font-size: 2rem;
         line-height: 10px;
         vertical-align: middle;
-        font-weight: 600;
+        font-weight: normal;
     }
 `;
 
@@ -124,6 +126,8 @@ const RunButton = styled(SubtlePrimaryButton)`
     justify-content: center;
     flex-direction: column;
     flex-shrink: 0;
+    font-family: 'GraphikArabic';
+    font-weight: normal;
 
     svg {
         margin-bottom: 0.5rem;

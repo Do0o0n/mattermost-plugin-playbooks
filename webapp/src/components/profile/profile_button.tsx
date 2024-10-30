@@ -46,7 +46,7 @@ export default function ProfileButton(props: Props) {
 }
 
 const Button = styled.button`
-    font-weight: 600;
+    font-weight: normal;
     height: 40px;
     padding: 0 4px 0 12px;
     border-radius: 4px;

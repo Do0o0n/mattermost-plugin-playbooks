@@ -117,6 +117,8 @@ const MenuWrapperComponent = styled.div`
         -moz-user-select: text; /* Firefox all */
         -ms-user-select: text; /* IE 10+ */
         user-select: text;
+        font-weight: normal;
+        font-family: 'GraphikArabic';
         /* stylelint-enable property-no-vendor-prefix*/
     }
 `;

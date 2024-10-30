@@ -55,9 +55,9 @@ const SectionHeaderContainer = styled.div`
 `;
 
 const SectionTitle = styled.div`
-    font-family: 'Open Sans';
+   font-family: 'GraphikArabic';
     font-style: normal;
-    font-weight: 600;
+    font-weight: normal;
     font-size: 12px;
     text-transform: uppercase;
 
@@ -65,7 +65,7 @@ const SectionTitle = styled.div`
 `;
 
 const LinkStyle = css`
-    font-weight: 600;
+    font-weight: normal;
     font-size: 12px;
     color: var(--button-bg);
     cursor: pointer;

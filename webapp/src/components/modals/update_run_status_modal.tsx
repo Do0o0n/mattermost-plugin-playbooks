@@ -474,7 +474,7 @@ const FormContainer = styled.div`
     ${Description} {
         span {
             text-decoration: underline;
-            font-weight: bold;
+            font-weight: normal;
         }
     }
 `;

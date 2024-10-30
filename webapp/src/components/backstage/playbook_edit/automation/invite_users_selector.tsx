@@ -149,7 +149,7 @@ const UserLabel = (props: UserLabelProps) => {
 const Remove = styled.span`
     display: inline-block;
 
-    font-weight: 600;
+    font-weight: normal;
     font-size: 12px;
     line-height: 9px;
     color: rgba(var(--center-channel-color-rgb), 0.56);
@@ -233,7 +233,8 @@ const StyledReactSelect = styled(ReactSelect)`
         font-size: 14px;
         padding-left: 3.2rem;
         padding-right: 16px;
-
+        font-weight: normal;
+        font-family: 'GraphikArabic';
         &--is-focused {
             box-shadow: inset 0 0 0px 2px var(--button-bg);
         }
@@ -260,7 +261,7 @@ const StyledReactSelect = styled(ReactSelect)`
 
             content: '${(props) => !props.isDisabled && props.badgeContent}';
 
-            font-weight: 600;
+            font-weight: normal;
             font-size: 10px;
             line-height: 16px;
         }
@@ -276,7 +277,7 @@ const StyledReactSelect = styled(ReactSelect)`
         height: 32px;
         padding: 8px 12px 8px;
         font-size: 12px;
-        font-weight: 600;
+        font-weight: normal;
         line-height: 16px;
         color: rgba(var(--center-channel-color-rgb), 0.56);
     }

@@ -57,12 +57,18 @@ export const ProfileName = styled.div<{hasExtra: boolean}>`
     text-overflow: ellipsis;
     min-height: 18px;
     display: flex;
+    font-family: 'GraphikArabic';
+    font-weight: normal;
+    font-family: "GraphikArabic";
     align-items: center;
     padding-right: ${({hasExtra}) => (hasExtra ? '4px' : '8px')};
 
     .description {
         color: rgba(var(--center-channel-color-rgb), 0.56);
-        margin-left: 4px;
+         html[dir="rtl"] & {
+        margin-right: 4px;}
+         html[dir="ltr"] & {
+        margin-left: 4px;}
     }
 `;
 

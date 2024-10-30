@@ -88,7 +88,7 @@ type StyledProps = {className?: string;};
 const StyledLink = styled(Link)`
     a&& {
         color: rgba(var(--center-channel-color-rgb), 0.56);
-        font-weight: 600;
+        font-weight: normal;
         font-size: 14px;
         display: inline-flex;
         flex-shrink: 0;
@@ -565,7 +565,7 @@ const ButtonIconStyled = styled(ButtonIcon)`
     align-items: center;
     font-size: 14px;
     line-height: 24px;
-    font-weight: 600;
+    font-weight: normal;
     border-radius: 4px;
     padding: 0px 8px;
     margin: 0;

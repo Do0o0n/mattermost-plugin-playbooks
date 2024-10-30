@@ -391,11 +391,11 @@ const ChecklistList = ({
 
 const AddChecklistLink = styled.button`
     font-size: 14px;
-    font-weight: 600;
+    font-weight: normal;
     line-height: 20px;
     height: 44px;
     width: 100%;
-
+font-family: "GraphikArabic";
     background: none;
     border: none;
 

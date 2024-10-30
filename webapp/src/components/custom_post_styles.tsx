@@ -7,6 +7,8 @@ export const CustomPostContainer = styled.div`
     border-radius: 4px;
     display: flex;
     flex-direction: row;
+     font-family: 'GraphikArabic';
+    font-weight: normal;
 `;
 
 export const CustomPostContent = styled.div`
@@ -15,12 +17,15 @@ export const CustomPostContent = styled.div`
     flex-direction: column;
     padding: 12px;
     padding-left: 16px;
+    font-family: 'GraphikArabic';
+    font-weight: normal;
 `;
 
 export const CustomPostHeader = styled.div`
-    font-weight: 600;
+    font-weight: normal;
     font-size: 16px;
     line-height: 24px;
+    font-family: 'GraphikArabic';
 `;
 
 export const CustomPostButtonRow = styled.div`

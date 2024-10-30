@@ -117,6 +117,7 @@ const TextArea = styled.textarea<TextAreaProps>`
     box-shadow: inset 0 0 0 1px rgba(var(--center-channel-color-rgb), 0.16);
     font-size: 14px;
     padding: 10px 16px;
+    font-weight: normal;
     resize: ${(props) => (props.disabled && 'none') || props.resize || 'none'};
 
     ${(props) => props.invalid && !props.disabled && props.value && css`

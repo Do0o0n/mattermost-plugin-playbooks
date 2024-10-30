@@ -62,7 +62,7 @@ const Button = styled.button`
     cursor: pointer;
     font-weight: normal;
     line-height: 28px;
-    text-align: left;
+   text-align: start;
     text-overflow: ellipsis;
     white-space: nowrap;
     border: none;

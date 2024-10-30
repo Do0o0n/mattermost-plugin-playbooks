@@ -11,7 +11,7 @@ export const Section = styled.div`
 `;
 
 export const SectionTitle = styled.div`
-    font-weight: 600;
+    font-weight: normal;
     margin: 0 0 32px 0;
 `;
 

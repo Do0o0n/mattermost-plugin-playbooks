@@ -149,7 +149,12 @@ export const HoverMenu = styled.div`
     padding: 0px 3px;
     position: absolute;
     height: 32px;
+     html[dir="ltr"] & {
     right: 1px;
+    }
+     html[dir="rtl"] & {
+    left: 1px; 
+    }
     top: -6px;
     border: 1px solid var(--center-channel-color-08);
     box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.08);

@@ -9,6 +9,7 @@ describe('durationFromQuery', () => {
         'bg',
         'de',
         'en-AU',
+        'ar',
         'en',
         'es',
 

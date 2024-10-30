@@ -101,7 +101,7 @@ const MetricsRunList = ({
 };
 
 const PlaybookRunList = styled.div`
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'GraphikArabic';
     color: rgba(var(--center-channel-color-rgb), 0.90);
 `;
 

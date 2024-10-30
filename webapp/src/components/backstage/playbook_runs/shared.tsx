@@ -36,7 +36,7 @@ export const HelpText = styled.div`
     line-height: 16px;
     margin-top: 4px;
     color: rgba(var(--center-channel-color-rgb), 0.64);
-    font-weight: 400;
+    
 `;
 
 export const ErrorText = styled.div`
@@ -90,15 +90,17 @@ export const AnchorLinkTitle = (props: AnchorLinkTitleProps) => {
 const LinkTitle = styled.h3`
     font-family: Metropolis, sans-serif;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: normal;
     line-height: 24px;
     padding-left: 8px;
     margin: 0;
+    color: var(--center-channel-color);
     white-space: nowrap;
     display: inline-block;
 
     ${CopyLink} {
-        margin-left: -1.25em;
+     html[dir="ltr"] & {
+        margin-left: -1.25em;}
         opacity: 1;
         transition: opacity ease 0.15s;
     }

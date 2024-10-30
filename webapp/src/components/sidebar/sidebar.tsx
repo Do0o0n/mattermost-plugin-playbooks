@@ -6,12 +6,14 @@ import {useSelector} from 'react-redux';
 import {Team} from '@mattermost/types/teams';
 import Scrollbars from 'react-custom-scrollbars';
 
+import {useHistory} from 'react-router-dom';
+
 import Tooltip from 'src/components/widgets/tooltip';
 
 import {renderThumbVertical, renderTrackHorizontal, renderView} from 'src/components/rhs/rhs_shared';
 
 import Group from './group';
-
+import './sidebar.scss';
 export interface GroupItem {
     id?: string;
     icon: string;
@@ -38,10 +40,9 @@ interface SidebarProps {
 }
 
 const selectTeam = (teamId: string) => (state: GlobalState): Team => getTeam(state, teamId);
-
 const Sidebar = (props: SidebarProps) => {
     const team = useSelector(selectTeam(props.team_id));
-
+    const history = useHistory();
     const teamName = (
         <TeamName>
             {team?.display_name}
@@ -51,6 +52,22 @@ const Sidebar = (props: SidebarProps) => {
     return (
         <SidebarComponent>
             <Header>
+                <button
+                    style={{width: '-webkit-fill-available'}}
+                    className='TertiaryButton-dMrJxk fyUTXM Buttons'
+                    // eslint-disable-next-line no-return-assign
+                    onClick={() => history.push('/')}
+                >
+                    <i
+                        className='fa fa-angle-left faa'
+                        // eslint-disable-next-line formatjs/no-literal-string-in-jsx
+                        title='أيقونة الرجوع'
+                    // eslint-disable-next-line formatjs/no-literal-string-in-jsx
+                    /> {'العوده إلى الدردشه'}
+                </button>
+            </Header>
+            <Header>
+
                 {team?.description ? (
                     <Tooltip
                         id='team-name__tooltip'
@@ -98,8 +115,9 @@ const SidebarComponent = styled.div`
     width: 240px;
     height: 100%;
     flex-direction: column;
-    border-right: 1px solid rgba(var(--center-channel-color-rgb), 0.12);
-    background-color: var(--sidebar-bg);
+      html[dir="ltr"] & {
+    border-right: 1px solid rgba(var(--center-channel-color-rgb), 0.12);}
+      html[dir="rtl"] & { border-left: 1px solid rgba(var(--center-channel-color-rgb), 0.12);}
 `;
 
 const Header = styled.div`
@@ -121,10 +139,11 @@ const TeamName = styled.h1`
     text-overflow: ellipsis;
     white-space: nowrap;
     color: var(--sidebar-header-text-color);
-    font-family: Metropolis, sans-serif;
-    font-weight: 600;
+    font-family: 'GraphikArabic';
+    font-weight: normal;
     font-size: 16px;
     line-height: 24px;
+    font-weight: 600;
     cursor: pointer;
 `;
 

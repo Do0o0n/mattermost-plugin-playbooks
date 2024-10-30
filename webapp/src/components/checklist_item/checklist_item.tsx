@@ -427,7 +427,7 @@ export const CheckboxContainer = styled.div`
         border-radius: 4px;
         font-family: Open Sans;
         font-style: normal;
-        font-weight: 600;
+        font-weight: normal;
         font-size: 12px;
         line-height: 17px;
         text-align: center;

@@ -102,7 +102,7 @@ const HeaderTitle = styled.div`
     margin: auto 0 auto 20px;
     line-height: 32px;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: normal;
     color: var(--center-channel-color);
     white-space: nowrap;
 `;

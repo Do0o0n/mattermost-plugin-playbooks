@@ -200,7 +200,7 @@ function sysadminSetup(user) {
     resetUserPreference(user.id);
     cy.apiUpdateUserStatus('online');
     cy.apiPatchMe({
-        locale: 'en',
+        locale: 'ar',
         timezone: {automaticTimezone: '', manualTimezone: 'UTC', useAutomaticTimezone: 'false'},
     });
 

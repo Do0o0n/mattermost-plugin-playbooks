@@ -272,7 +272,7 @@ const StyledSection = styled(Section)`
 `;
 
 const StyledSectionTitle = styled(SectionTitle)`
-    font-weight: 600;
+    font-weight: normal;
     margin: 0 0 24px;
     font-size: 16px;
     display: flex;

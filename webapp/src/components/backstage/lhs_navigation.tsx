@@ -6,8 +6,7 @@ import PlaybooksSidebar, {playbookLHSQueryDocument} from 'src/components/sidebar
 
 const LHSContainer = styled.div`
     width: 240px;
-    background-color: var(--sidebar-bg);
-
+   background-color: var(--sidebar-header-bg);
     display: flex;
     flex-direction: column;
 `;

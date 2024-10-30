@@ -211,12 +211,13 @@ const Filters = styled.div`
 
 const FilterAssignedText = styled.div`
     font-size: 12px;
-    font-weight: 600;
+    font-weight: normal;
     line-height: 16px;
     margin: 0 5px;
 `;
 const FilterOverdueText = styled(FilterAssignedText)`
     color: var(--dnd-indicator);
+    font-weight: normal;
 `;
 
 const FilterWrapper = styled.div``;
@@ -225,7 +226,7 @@ const FilterButton = styled(DotMenuButton)`
     color: var(--button-bg);
     height: 20px;
     font-size: 12px;
-    font-weight: 600;
+    font-weight: normal;
     cursor: pointer;
     padding: 0 10px;
     border: 0;
@@ -317,7 +318,7 @@ const ZeroCaseTitle = styled.h3`
     margin-bottom: 15px;
     color: var(--center-channel-color);
     font-size: 20px;
-    font-weight: 600;
+    font-weight: normal;
     line-height: 20px;
 `;
 

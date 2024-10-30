@@ -94,7 +94,7 @@ export const Rest = styled.div<{sizeInPx: number}>`
     background-color: rgba(var(--center-channel-color-rgb), 0.16);
     color: rgba(var(--center-channel-color-rgb), 0.72);
 
-    font-weight: 600;
+    font-weight: normal;
     font-size: 11px;
 
     display: flex;

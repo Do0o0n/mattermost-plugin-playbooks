@@ -16,7 +16,10 @@ export const StyledDropdownMenuItem = styled(DropdownMenuItem)`
     align-items: center;
 
     svg {
-        margin-right: 11px;
+     html[dir="ltr"] & {
+        margin-right: 11px;}
+         html[dir="rtl"] & {
+       margin-left: 11px;}
         fill: rgb(var(--center-channel-color-rgb), 0.56);
     }
 `;
@@ -24,17 +27,17 @@ export const StyledDropdownMenuItem = styled(DropdownMenuItem)`
 export const StyledDropdownMenuItemRed = styled(StyledDropdownMenuItem)`
     && {
         color: var(--dnd-indicator);
-
+font-weight: normal;
         svg {
             fill: var(--dnd-indicator);
         }
 
         :hover {
             background: var(--dnd-indicator);
-            color: var(--button-color);
+            color: var(--sidebar-text-rgb);
 
             svg {
-                fill: var(--button-color);
+                fill: var(--sidebar-text-rgb);
             }
         }
     }

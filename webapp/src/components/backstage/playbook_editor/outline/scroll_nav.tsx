@@ -149,7 +149,7 @@ const Header = styled.div`
     height: 32px;
     text-transform: uppercase;
 
-    font-weight: 600;
+    font-weight: normal;
     font-size: 12px;
     line-height: 16px;
 
@@ -187,7 +187,7 @@ const Item = styled.div<{active: boolean}>`
         margin-bottom: 8px;
     }
 
-    font-weight: 400;
+    
     font-size: 14px;
     line-height: 14px;
 

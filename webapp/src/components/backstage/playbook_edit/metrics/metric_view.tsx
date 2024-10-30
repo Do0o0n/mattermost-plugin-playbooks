@@ -140,12 +140,12 @@ const DescrText = styled.span`
 `;
 
 const Title = styled.div`
-    font-weight: 600;
+    font-weight: normal;
     color: var(--center-channel-color);
 `;
 
 const Bold = styled.span`
-    font-weight: 600;
+    font-weight: normal;
 `;
 
 export default MetricView;

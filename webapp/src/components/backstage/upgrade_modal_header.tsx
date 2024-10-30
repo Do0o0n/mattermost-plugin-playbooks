@@ -30,9 +30,9 @@ const Title = styled(CenteredRow)`
     height: 32px;
     margin-bottom: 8px;
 
-    font-weight: 600;
+    font-weight: normal;
     font-size: 24px;
-    color: rgba(var(--center-channel-color-rgb), 1);
+   
 `;
 
 const HelpText = styled(CenteredRow)`
@@ -41,7 +41,7 @@ const HelpText = styled(CenteredRow)`
     text-align: center;
     width: 448px;
 
-    font-weight: 400;
+    
     font-size: 12px;
     color: var(--center-channel-color);
 `;

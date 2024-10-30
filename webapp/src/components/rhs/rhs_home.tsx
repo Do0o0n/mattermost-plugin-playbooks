@@ -39,8 +39,9 @@ const WelcomeBlock = styled.div`
 const WelcomeDesc = styled.p`
     font-size: 14px;
     line-height: 21px;
-    font-weight: 400;
-    margin-bottom: 3rem;
+     margin-bottom: 3rem;
+     font-weight: normal;
+    font-family: 'GraphikArabic';
 `;
 
 const WelcomeCreateAlt = styled.span`
@@ -48,6 +49,8 @@ const WelcomeCreateAlt = styled.span`
     align-items: center;
     vertical-align: top;
     padding: 1rem 0;
+     font-weight: normal;
+    font-family: 'GraphikArabic';
 
     > svg {
         margin-left: 0.5em;
@@ -77,15 +80,18 @@ const Header = styled.div`
 const Heading = styled.h4`
     font-size: 18px;
     line-height: 24px;
-    font-weight: 700;
+    font-weight: normal;
+    font-family: 'GraphikArabic';
     color: rgba(var(--center-channel-color-rgb), 0.72);
 `;
 
 const ListHeading = styled(Heading)`
     ${SemiBoldHeading} {
     }
-
-    padding-left: 2.75rem;
+  html[dir="rtl"] & {
+  padding-right: 2.75rem;}
+   html[dir="ltr"] & {
+   padding-left: 2.75rem;}
 `;
 
 const ListSection = styled.div`

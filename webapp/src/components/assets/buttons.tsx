@@ -14,7 +14,7 @@ export const Button = styled.button`
     color: rgba(var(--center-channel-color-rgb), 0.72);
     border-radius: 4px;
     border: 0px;
-    font-weight: 600;
+    font-weight: normal;
     font-size: 14px;
     padding: 0 20px;
     position: relative;
@@ -34,10 +34,7 @@ export const Button = styled.button`
         text-decoration: none;
     }
 
-    &:disabled {
-        color: rgba(var(--center-channel-color-rgb), 0.32);
-        background: rgba(var(--center-channel-color-rgb), 0.08);
-    }
+  
 
     i {
         display: flex;
@@ -50,6 +47,9 @@ export const PrimaryButton = styled(Button)`
         background: var(--button-bg);
         color: var(--button-color);
         white-space: nowrap;
+        font-family: 'GraphikArabic';
+        font-weight: normal;
+
     }
 
     &:active:not([disabled]) {
@@ -77,10 +77,7 @@ export const PrimaryButton = styled(Button)`
         }
     }
 
-    &:disabled {
-        color: rgba(var(--center-channel-color-rgb), 0.32);
-        background: rgba(var(--center-channel-color-rgb), 0.08);
-    }
+   
 `;
 
 export const SubtlePrimaryButton = styled(Button)`
@@ -99,17 +96,14 @@ export const TertiaryButton = styled.button`
     height: 40px;
     border-radius: 4px;
     border: 0px;
-    font-weight: 600;
+    font-weight: normal;
     font-size: 14px;
     padding: 0 20px;
 
     color: var(--button-bg);
     background: rgba(var(--button-bg-rgb), 0.08);
 
-    &:disabled {
-        color: rgba(var(--center-channel-color-rgb), 0.32);
-        background: rgba(var(--center-channel-color-rgb), 0.08);
-    }
+    
 
     &:hover:enabled {
         background: rgba(var(--button-bg-rgb), 0.12);
@@ -172,7 +166,7 @@ export const DestructiveButton = styled.button`
     align-items: center;
     justify-content: center;
 
-    font-weight: 600;
+    font-weight: normal;
     font-size: 14px;
 
     padding: 0 20px;

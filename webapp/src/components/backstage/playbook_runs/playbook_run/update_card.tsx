@@ -96,7 +96,7 @@ const ProfilePic = styled.img`
 `;
 const Author = styled.span`
     font-size: 14px;
-    font-weight: 600;
+    font-weight: normal;
     color: var(--center-channel-color);
     margin-right: 6px;
 `;
@@ -110,5 +110,5 @@ const Body = styled.div`
     color: var(--center-channel-color);
     font-size: 14px;
     line-height: 20px;
-    font-weight: 400;
+    
 `;

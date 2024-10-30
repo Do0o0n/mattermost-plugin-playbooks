@@ -40,6 +40,7 @@ const HeaderEl = styled.header`
     align-items: center;
     justify-content: space-between;
     padding: 16px;
+    color: rgba(var(--sidebar-text-rgb), 0.72);
 
     h1,
     h2,
@@ -52,17 +53,16 @@ const HeaderEl = styled.header`
     }
 
     h2 {
-        color: rgba(var(--center-channel-color-rgb), 1);
         font-size: 16px;
-        font-weight: 600;
+        font-weight: normal;
+        font-family: 'GraphikArabic';
     }
 
     > div p {
         margin: 6px 0 0;
-        color: rgba(var(--center-channel-color-rgb), 0.56);
-        font-size: 12px;
-        font-weight: 400;
         line-height: 16px;
+            font-family: 'GraphikArabic';
+    font-weight: normal;
     }
 `;
 

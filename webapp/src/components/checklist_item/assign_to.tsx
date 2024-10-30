@@ -139,7 +139,7 @@ const StyledProfileSelector = styled(ProfileSelector)`
         border-radius: 100px;
         border: none;
 
-        font-weight: 400;
+        
         font-size: 12px;
         line-height: 10px;
 
@@ -155,7 +155,7 @@ const StyledProfileSelector = styled(ProfileSelector)`
         }
 
         .icon-chevron-down{
-            font-weight: 400;
+            
             font-size: 14.4px;
             line-height: 14px;
             display: flex;
@@ -200,7 +200,7 @@ const AssignToTextContainer = styled.div<{isPlaceholder: boolean, enableEdit: bo
             color: var(--center-channel-color);
         }
     `}
-    font-weight: 400;
+    
     font-size: 12px;
     line-height: 15px;
 `;
@@ -223,7 +223,7 @@ export const AssignToContainer = styled.div`
 const ControlComponentAnchor = styled.a`
     display: inline-block;
     margin: 0 0 8px 12px;
-    font-weight: 600;
+    font-weight: normal;
     font-size: 12px;
     position: relative;
     top: -4px;

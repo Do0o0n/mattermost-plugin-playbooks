@@ -90,9 +90,9 @@ const StyledToast = styled.div<{toastStyle: ToastStyle}>`
 `;
 
 const StyledText = styled.div`
-    font-family: Open Sans;
+   font-family: 'GraphikArabic';
     font-style: normal;
-    font-weight: 600;
+    font-weight: normal;
     font-size: 12px;
     line-height: 16px;
 
@@ -122,5 +122,5 @@ const StyledButton = styled.button`
     border: none;
     font-size: 12px;
     line-height: 16px;
-    font-weight: 600;
+    font-weight: normal;
 `;

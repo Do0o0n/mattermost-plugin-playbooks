@@ -37,6 +37,8 @@ const Container = styled.div`
     flex-direction: column;
     align-items: center;
     margin-top: 96px;
+    color: var(--center-channel-color);
+    font-family: 'GraphikArabic';
 `;
 
 const InnerContainer = styled.div`
@@ -46,20 +48,20 @@ const InnerContainer = styled.div`
 
 const Title = styled.div`
     font-size: 22px;
-    font-weight: 600;
+    font-weight: normal;
     line-height: 28px;
     margin-top: 24px;
 `;
 
 const Text = styled.div`
     font-size: 14px;
-    font-weight: 400;
+    
     line-height: 20px;
     margin: 8px 0 24px 0;
 `;
 
 const StyledButton = styled(SecondaryButton)`
-    font-weight: 600;
+    font-weight: normal;
     font-size: 14px;
     padding: 0 20px;
     height: 40px;

@@ -54,7 +54,7 @@ const Item = (props: ItemProps) => {
 
 export const ItemDisplayLabel = styled.span`
     max-width: 100%;
-    height: 18px;
+    height: auto;
     line-height: 18px;
     text-align: justify;
     overflow: hidden;
@@ -71,10 +71,12 @@ export const Icon = styled.i`
 export const ItemContainer = styled.li<{isCollapsed?: boolean}>`
     display: flex;
 
-    height: 32px;
+    height: auto;
     align-items: center;
     list-style-type: none;
     transition: height 0.18s ease;
+        border-bottom: var(--border-light);
+    border-color: rgba(var(--sidebar-text-rgb), 0.08)
 
     ${(props) => props.isCollapsed && css`
         height: 0px;
@@ -86,7 +88,7 @@ export const StyledNavLink = styled(NavLink)`
         position: relative;
         display: flex;
         width: 240px;
-        height: 32px;
+        height: -webkit-fill-available;
         align-items: center;
         padding: 7px 16px 7px 19px;
         border-top: 0;
@@ -109,6 +111,9 @@ export const StyledNavLink = styled(NavLink)`
         &.active {
             color: rgba(var(--sidebar-text-rgb), 1);
             background: rgba(var(--sidebar-text-rgb), 0.16);
+            font-family: 'GraphikArabic';
+            font-weight: normal;
+            border: #00987e 1px solid;
             ::before {
                 position: absolute;
                 top: 0;
@@ -139,7 +144,10 @@ const HoverMenu = styled.div`
     align-items: center;
 
     position: absolute;
-    right: 8px;
+      html[dir="ltr"] & {
+    right: 8px;}
+    html[dir="rtl"] & {
+    left: 8px;}
 `;
 
 const NameIconContainer = styled.div`

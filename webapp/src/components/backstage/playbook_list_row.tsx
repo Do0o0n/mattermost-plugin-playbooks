@@ -85,7 +85,7 @@ const PlaybookItem = styled.div`
 
 const PlaybookItemTitle = styled.div`
     display: flex;
-	font-weight: 600;
+	font-weight: normal;
     flex-direction: column;
     position: relative;
     width: 33.333333%;

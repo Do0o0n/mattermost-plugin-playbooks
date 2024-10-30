@@ -158,6 +158,9 @@ const Button = styled.button`
     &:hover:not(.active) {
         background: rgba(var(--sidebar-text-rgb), 0.16);
         color: var(--sidebar-text);
+        font-family: 'GraphikArabic';
+        font-weight: normal;
+        border: #00987e 1px solid;
     }
 
     min-width: 28px;

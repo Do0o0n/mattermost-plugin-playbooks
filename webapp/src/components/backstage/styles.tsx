@@ -19,7 +19,7 @@ export const Banner = styled.div`
 `;
 
 export const BackstageSubheader = styled.header`
-    font-weight: 600;
+    font-weight: normal;
     font-size: 14px;
     line-height: 20px;
     color: var(--center-channel-color);
@@ -31,6 +31,7 @@ export const BackstageSubheaderDescription = styled.div`
     line-height: 20px;
     color: rgba(var(--center-channel-color-rgb), 0.64);
     margin: 4px 0 16px;
+   font-family: 'GraphikArabic';
 `;
 
 export const StyledTextarea = styled.textarea`
@@ -217,7 +218,7 @@ export const FilterButton = styled.button<{active?: boolean;}>`
     color: rgba(var(--center-channel-color-rgb), 0.56);
     background: transparent;
     cursor: pointer;
-    font-weight: 600;
+    font-weight: normal;
     font-size: 14px;
     line-height: 12px;
     transition: all 0.15s ease;

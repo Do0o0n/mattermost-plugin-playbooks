@@ -12,7 +12,7 @@ const Component = styled.label`
     user-select: none;
     width: fit-content;
     white-space: nowrap;
-
+font-weight: normal;
 
     transition: background-color 0.2s;
 
@@ -31,8 +31,12 @@ const Component = styled.label`
 
         height: 16px;
         width: 16px;
+         html[dir="rtl"] & { 
+         margin-left: 10px;
+         }
+        html[dir="ltr"] & { 
         margin-right: 10px;
-
+        }
         border-radius: 2px;
         border: 1px solid rgba(var(--center-channel-color-rgb), 0.24);
         background-color: var(--center-channel-bg);

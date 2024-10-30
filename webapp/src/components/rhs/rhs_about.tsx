@@ -223,7 +223,10 @@ const Row = styled.div`
 
 const MemberSection = styled.div`
     :not(:first-child) {
-        margin-left: 36px;
+    html[dir="ltr"] & {
+        margin-left: 36px;}
+        html[dir="rtl"] & {
+        margin-right: 36px;}
     }
 `;
 
@@ -235,10 +238,10 @@ const ParticipantsSection = styled(MemberSection)`
 `;
 
 const MemberSectionTitle = styled.div`
-    font-weight: 600;
+    font-weight: normal;
     font-size: 12px;
     line-height: 16px;
-
+    font-family: 'GraphikArabic';
     color: rgba(var(--center-channel-color-rgb), 0.72);
 `;
 

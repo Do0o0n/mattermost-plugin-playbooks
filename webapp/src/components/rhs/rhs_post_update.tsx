@@ -178,7 +178,8 @@ const PostUpdate = styled.div<CollapsedProps>`
     padding: ${(props) => (props.collapsed ? '8px 8px 8px 12px' : '12px')};
 
     background-color: var(--center-channel-bg);
-
+    font-family: 'GraphikArabic';
+    font-weight: normal;
     border: 1px solid rgba(var(--center-channel-color-rgb), 0.08);
     border-radius: 4px;
     position: relative;
@@ -212,12 +213,12 @@ const UpdateNotice = styled.div<CollapsedProps & {isDue: boolean}>`
 `;
 
 const UpdateNoticePretext = styled.div`
-    font-weight: 400;
+    
     margin-right: 3px;
 `;
 
 const UpdateNoticeTime = styled.div<CollapsedProps>`
-    font-weight: 600;
+    font-weight: normal;
 
     ${(props) => !props.collapsed && css`
         font-size: 16px;

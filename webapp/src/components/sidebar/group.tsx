@@ -90,28 +90,43 @@ const Header = styled.div`
     background-color: var(--sidebar-bg);
     box-shadow: 0 0 0 0 rgb(0 0 0 / 33%);
     color: rgba(var(--sidebar-text-rgb), 0.6);
-    font-family: "Open Sans", sans-serif;
-    text-align: left;
+    font-family: 'GraphikArabic';
+   
     text-overflow: ellipsis;
     text-transform: uppercase;
     transition: box-shadow 0.25s ease-in-out;
+    html[dir="rtl"] & {
+     direction: ltr;
+     text-align: right;
+     }
+      html[dir="ltr"] & {
+     text-align: left;
+     }
 `;
 
 const HeaderButton = styled.button`
     display: flex;
     flex: 1 1 auto;
     align-items: center;
-    padding: 0;
+   
     border: none;
     background-color: transparent;
     color: rgba(var(--sidebar-text-rgb), 0.6);
-    text-align: left;
+   
     text-transform: uppercase;
     white-space: nowrap;
     cursor: pointer;
-    padding: 6px 20p 6px 4px;
+    
     font-size: 12px;
-    font-weight: 600;
+    font-weight: normal;
+     html[dir="ltr"] & {
+      text-align: left;
+       padding: 0;
+     }
+     html[dir="rtl"] & {
+     text-align: right;
+     padding: 6px 20px 6px 4px;
+     }
 
     :hover{
         color: var(--sidebar-text);

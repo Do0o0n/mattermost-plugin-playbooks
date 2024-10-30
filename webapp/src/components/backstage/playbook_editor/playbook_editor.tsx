@@ -194,6 +194,7 @@ const PlaybookEditor = () => {
                             margin: 6px 0;
                             padding: 10px 16px;
                             display: inline-flex;
+                            font-weight: normal;
                             flex: 1 1 auto;
                         }
                         ${CancelSaveContainer} {
@@ -337,7 +338,10 @@ const Header = styled.header`
     z-index: 4;
 
     ${CopyLink} {
-        margin-left: -40px;
+     html[dir="ltr"] & {
+        margin-left: -40px;}
+         html[dir="rtl"] & {
+        margin-right: -40px;}
         height: 40px;
         width: 40px;
         font-size: 24px;
@@ -389,7 +393,7 @@ const Title = styled.h1`
 `;
 
 const Description = styled.div`
-    font-weight: 400;
+    
     font-size: 14px;
     line-height: 20px;
     color: rgba(var(--center-channel-color-rgb), 0.72);
@@ -400,7 +404,7 @@ const NavItem = styled(NavLink)`
     align-items: center;
     text-align: center;
     padding: 20px 30px;
-    font-weight: 600;
+    font-weight: normal;
 
     && {
         color: rgba(var(--center-channel-color-rgb), 0.64);
@@ -491,7 +495,7 @@ const Editor = styled.main<{$headingVisible: boolean}>`
 
 
     ${Sections} {
-        margin: 5rem 1.5rem;
+     
         grid-area: content;
 
         ${HorizontalBG} {

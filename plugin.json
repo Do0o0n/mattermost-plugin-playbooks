@@ -1,7 +1,7 @@
 {
     "id": "playbooks",
     "name": "Playbooks",
-    "description": "Mattermost Playbooks enable reliable and repeatable processes for your teams using checklists, automation, and retrospectives.",
+    "description": "تمكّن خطط العمل من عمليات موثوقة وقابلة للتكرار لفِرقك باستخدام قواعد العمل والأتمتة والمراجعات.",
     "homepage_url": "https://github.com/mattermost/mattermost-plugin-playbooks/",
     "support_url": "https://github.com/mattermost/mattermost-plugin-playbooks/issues",
     "icon_path": "assets/plugin_icon.svg",
@@ -25,8 +25,8 @@
         {
             "key": "EnableExperimentalFeatures",
             "type": "bool",
-            "display_name": "Enable Experimental Features:",
-            "help_text": "Enable experimental features that come with in-progress UI, bugs, and cool stuff."
+            "display_name": "تمكين الميزات التجريبية:",
+            "help_text": "قم بتمكين الميزات التجريبية ."
         }
         ]
     }

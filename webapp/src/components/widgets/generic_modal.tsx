@@ -7,6 +7,9 @@ import React from 'react';
 import {Modal} from 'react-bootstrap';
 import {FormattedMessage} from 'react-intl';
 
+// eslint-disable-next-line no-relative-import-paths/no-relative-import-paths
+import '../modals/styls.scss';
+
 import {DestructiveButton, PrimaryButton, TertiaryButton} from 'src/components/assets/buttons';
 
 type Props = {
@@ -123,41 +126,43 @@ export default class GenericModal extends React.PureComponent<Props, State> {
         const showFooter = Boolean(confirmButton || cancelButton || this.props.footer !== undefined);
 
         return (
-            <StyledModal
-                dialogClassName={classNames('a11y__modal GenericModal', this.props.className)}
-                show={this.props.show ?? this.state.show}
-                onHide={this.onHide}
-                onExited={this.props.onExited || this.onHide}
-                enforceFocus={this.props.enforceFocus}
-                restoreFocus={true}
-                role='dialog'
-                aria-labelledby={`${this.props.id}_heading`}
-                id={this.props.id}
-                container={document.getElementById('root-portal')}
-            >
-                <Header
-                    className='GenericModal__header'
-                    closeButton={true}
+            <div className='a11y__modals'>
+                <StyledModal
+                    dialogClassName={classNames('a11y__modal GenericModal')}
+                    show={this.props.show ?? this.state.show}
+                    onHide={this.onHide}
+                    onExited={this.props.onExited || this.onHide}
+                    enforceFocus={this.props.enforceFocus}
+                    restoreFocus={true}
+                    role='dialog'
+                    aria-labelledby={`${this.props.id}_heading`}
+                    id={this.props.id}
+                    container={document.getElementById('root-portal')}
                 >
-                    {Boolean(this.props.modalHeaderText) && (
-                        <ModalHeading id={`${this.props.id}_heading`}>{this.props.modalHeaderText}</ModalHeading>
-                    )}
-                </Header>
-                <>
-                    <Modal.Body>{this.props.children}</Modal.Body>
-                    {showFooter ? (
-                        <Modal.Footer>
-                            <FooterContainer>
-                                <Buttons>
-                                    {cancelButton}
-                                    {confirmButton}
-                                </Buttons>
-                                {this.props.footer}
-                            </FooterContainer>
-                        </Modal.Footer>
-                    ) : null}
-                </>
-            </StyledModal>
+                    <Header
+                        className='GenericModal__header'
+                        closeButton={true}
+                    >
+                        {Boolean(this.props.modalHeaderText) && (
+                            <ModalHeading id={`${this.props.id}_heading`}>{this.props.modalHeaderText}</ModalHeading>
+                        )}
+                    </Header>
+                    <>
+                        <Modal.Body>{this.props.children}</Modal.Body>
+                        {showFooter ? (
+                            <Modal.Footer>
+                                <FooterContainer>
+                                    <Buttons>
+                                        {cancelButton}
+                                        {confirmButton}
+                                    </Buttons>
+                                    {this.props.footer}
+                                </FooterContainer>
+                            </Modal.Footer>
+                        ) : null}
+                    </>
+                </StyledModal>
+            </div>
         );
     }
 }
@@ -168,16 +173,20 @@ export const StyledModal = styled(Modal)`
         grid-template-rows: 1fr auto 2fr;
         place-content: start center;
         padding: 8px;
+        overflow: visible !important;
+        width: auto !important;
         /* content-spacing */
         .modal-body {
             overflow: visible;
-            padding: 0 32px;
+               html[dir="ltr"] & {
+            padding: 0 32px;}
         }
 
         .modal-dialog {
             margin: 0px !important;
             max-width: 100%;
             grid-row: 2;
+            
         }
     }
 
@@ -219,6 +228,7 @@ export const ModalSideheading = styled.h6`
     line-height: 20px;
     color: rgba(var(--center-channel-color-rgb), 0.56);
     padding-left: 8px;
+     font-weight: normal;
     margin: 0 0 0 8px;
     border-left: solid 1px rgba(var(--center-channel-color-rgb), 0.56);
 `;
@@ -228,7 +238,7 @@ export const ModalSubheading = styled.h6`
     line-height: 16px;
     margin-top: 6px;
     margin-bottom: 0;
-    font-family: 'Open Sans';
+    font-family: 'GraphikArabic';
     color: rgba(var(--center-channel-color-rgb), 0.72);
 `;
 
@@ -236,14 +246,15 @@ export const Description = styled.p`
     font-size: 14px;
     line-height: 16px;
     color: rgba(var(--center-channel-color-rgb), 0.72);
+    
 
     a {
-        font-weight: bold;
+        font-weight: normal;
     }
 `;
 
 export const Label = styled.label`
-    font-weight: 600;
+    font-weight: normal;
     font-size: 14px;
     line-height: 20px;
     color: var(--center-channel-color);

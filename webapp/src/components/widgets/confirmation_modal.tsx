@@ -7,6 +7,7 @@ import {FormattedMessage} from 'react-intl';
 
 import {PrimaryButton, TertiaryButton} from 'src/components/assets/buttons';
 
+import './styls.scss';
 import {
     Buttons,
     DefaultFooterContainer,
@@ -221,8 +222,9 @@ export default class ConfirmModal extends React.Component<Props, State> {
         }
 
         return (
+            <div className='a11y__modals'>
             <StyledModal
-                dialogClassName={'a11y__modal GenericModal'}
+                dialogClassName={'a11y__modal a11y__modals  GenericModal'}
                 show={this.props.show}
                 onHide={this.props.onCancel}
                 onExited={this.props.onExited}
@@ -266,6 +268,7 @@ export default class ConfirmModal extends React.Component<Props, State> {
                     </DefaultFooterContainer>
                 </Modal.Footer>
             </StyledModal>
+            </div>
         );
     }
 }

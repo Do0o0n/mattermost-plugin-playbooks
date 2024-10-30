@@ -11,8 +11,8 @@ export const RHSTitleContainer = styled.div`
 `;
 
 export const RHSTitleText = styled.div`
-    font-family: Metropolis;
-    font-weight: 600;
+   
+    font-weight: normal;
     font-size: 16px;
     line-height: 32px;
     flex-shrink: 0;

@@ -217,9 +217,11 @@ const Wrapper = styled.div`
     display: flex;
     flex: 1;
     color: var(--center-channel-color);
-    font-weight: 400;
+    
     font-size: 14px;
     line-height: 20px;
+     font-weight: normal;
+    font-family: 'GraphikArabic';
 `;
 
 const Right = styled.div`

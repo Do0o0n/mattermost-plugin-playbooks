@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 // Copyright (c) 2015-present Mattermost, Inc. All Rights Reserved.
 // See LICENSE.txt for license information.
 
@@ -206,9 +207,9 @@ const RHSRunList = (props: Props) => {
                                 onStartRunClicked={handleStartRun}
                             />
                         </NoRunsWrapper>
-                        <FeedbackWrapper>
+                        {/* <FeedbackWrapper>
                             <StyledGiveFeedbackButton tooltipPlacement='top'/>
-                        </FeedbackWrapper>
+                        </FeedbackWrapper> */}
                     </>
                 }
                 {!showNoRuns &&
@@ -237,9 +238,9 @@ const RHSRunList = (props: Props) => {
                                 <StyledLoadingSpinner/>
                             }
                         </RunsList>
-                        <FeedbackWrapper>
+                        {/* <FeedbackWrapper>
                             <StyledGiveFeedbackButton tooltipPlacement='top'/>
-                        </FeedbackWrapper>
+                        </FeedbackWrapper> */}
                     </Scrollbars>
                 }
             </Container>
@@ -281,8 +282,8 @@ const NoRunsWrapper = styled.div`
 `;
 
 const FilterMenuTitle = styled.div`
-    font-family: Metropolis;
-    font-weight: 600;
+   font-family: 'GraphikArabic';
+    font-weight: normal;
     font-size: 16px;
     line-height: 24px;
 `;
@@ -313,7 +314,7 @@ const VerticalLine = styled.div`
 
 const ChannelNameText = styled.div`
     color: rgba(var(--center-channel-color-rgb), 0.56);
-    font-weight: 400;
+    
     font-size: 12px;
     line-height: 20px;
     overflow: hidden;
@@ -334,7 +335,7 @@ const StartRunButton = styled(SecondaryButton)`
 
     border: 0;
     height: 100%;
-    font-weight: 600;
+    font-weight: normal;
     font-size: 12px;
     color: var(--button-bg);
     background: rgba(var(--button-bg-rgb), 0.08);
@@ -350,8 +351,9 @@ const SortMenuTitle = styled.div`
     text-transform: uppercase;
     font-size: 12px;
     line-height: 16px;
-    font-weight: 600;
+    font-weight: normal;
     margin: 5px 18px;
+    font-family: 'GraphikArabic';
 `;
 
 const FilterMenuItem = styled(DropdownMenuItem)`
@@ -369,6 +371,7 @@ const StyledDropdownMenuSort = styled(DropdownMenuItem)`
     align-items: center;
 `;
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const StyledGiveFeedbackButton = styled(GiveFeedbackButton)`
     && {
         font-size: 12px;
@@ -543,7 +546,8 @@ const CardWrapper = styled.div<{ progress: number }>`
     padding:0;
     border-radius: 4px;
     position: relative;
-
+    font-family: 'GraphikArabic';
+    font-weight: normal;
     &:after {
         content: '';
         display: block;
@@ -613,7 +617,7 @@ const CardTitleContainer = styled.div`
 `;
 const TitleRow = styled.div`
     font-size: 14px;
-    font-weight: 600;
+    font-weight: normal;
 
     overflow: hidden;
     text-overflow: ellipsis;
@@ -631,7 +635,7 @@ const InfoRow = styled.div`
 `;
 const LastUpdatedText = styled.div`
     font-size: 11px;
-    font-weight: 400;
+    
     line-height: 16px;
     color: rgba(var(--center-channel-color-rgb), 0.64);
 `;
@@ -648,18 +652,19 @@ const PlaybookChip = styled.div`
 `;
 const PlaybookChipText = styled.span`
     font-size: 10px;
-    font-weight: 600;
+    font-weight: normal;
     line-height: 16px;
     color: rgba(var(--center-channel-color-rgb), 0.72);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+        font-family: 'GraphikArabic';
 `;
 
 const OwnerProfileChip = styled(Profile)`
     flex-grow: 0;
 
-    font-weight: 400;
+    
     font-size: 11px;
     line-height: 15px;
     padding: 2px 10px 2px 2px;
@@ -762,10 +767,11 @@ const NoActiveRunsContainer = styled.div`
     margin: auto;
 `;
 const NoRunsText = styled.div`
-    font-weight: 600;
+    font-weight: normal;
     font-size: 20px;
     line-height: 28px;
     text-align: center;
+    font-family: 'GraphikArabic';
 `;
 const ViewOtherRunsButton = styled(TertiaryButton)`
     background: none;
@@ -912,11 +918,11 @@ const TasksDone = styled.div`
 
 const TasksDoneNumbers = styled.div`
     margin-right: 6px;
-    font-weight: 600;
+    font-weight: normal;
 `;
 
 const TasksDoneText = styled.div`
-    font-weight: 400;
+    
 `;
 
 export default RHSRunList;

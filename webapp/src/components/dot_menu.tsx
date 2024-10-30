@@ -37,11 +37,11 @@ export const DropdownMenu = styled.div`
 
     width: max-content;
     min-width: 16rem;
-    text-align: left;
+    text-align: start;
     list-style: none;
 
     padding: 10px 0;
-    font-family: Open Sans;
+    font-family: 'GraphikArabic'; 
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -144,7 +144,7 @@ const DotMenu = ({
 
 export const DropdownMenuItemStyled = styled.a`
  && {
-    font-family: 'Open Sans';
+   font-family: 'GraphikArabic';
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -166,7 +166,7 @@ export const DropdownMenuItemStyled = styled.a`
 export const DisabledDropdownMenuItemStyled = styled.div`
  && {
     cursor: default;
-    font-family: 'Open Sans';
+   font-family: 'GraphikArabic';
     font-style: normal;
     font-weight: normal;
     font-size: 14px;

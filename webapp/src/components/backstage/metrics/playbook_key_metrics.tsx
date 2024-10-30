@@ -105,9 +105,9 @@ const InnerContainer = styled.div`
     padding: 0 20px 20px;
     max-width: 1120px;
     margin: 0 auto;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'GraphikArabic';
     font-style: normal;
-    font-weight: 600;
+    font-weight: normal;
 `;
 
 const RunListContainer = styled.div`

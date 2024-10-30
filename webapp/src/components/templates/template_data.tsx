@@ -53,558 +53,559 @@ const preprocessTemplates = (presetTemplates: PresetTemplate[]): PresetTemplate[
 
 export const PresetTemplates: PresetTemplate[] = preprocessTemplates([
     {
-        title: 'Blank',
+        title: 'فارغ',
         icon: <ClipboardChecklist/>,
         color: '#FFBC1F14',
-        description: 'Start with a blank state and create your own masterpiece.',
+        description: 'ابدأ بحالة فارغة وأنشئ عملك الفني الخاص.',
         template: {
             ...emptyPlaybook(),
-            title: 'Blank',
-            description: 'Customize this playbook\'s description to give an overview of when and how this playbook is run.',
+            title: 'فارغ',
+            description: 'قم بتخصيص وصف  خطة العمل هذه لتقديم نظرة عامة عن الوقت والطريقة التي يتم بها تشغيل  خطة العمل هذه.',
         },
     },
     {
-        title: 'Product Release',
-        description: 'Perfect your release process from ideation to production.',
+        title: 'إصدار المنتج',
+        description: 'أصلح عملية الإصدار الخاصة بك من التصور إلى الإنتاج.',
+
         icon: <Rocket/>,
         color: '#C4313314',
         author: <MattermostLogo/>,
         template: {
             ...emptyPlaybook(),
-            title: 'Product Release',
-            description: 'Customize this playbook to reflect your own product release process.',
+            title: 'إصدار المنتج',
+            description: 'قم بتخصيص  خطة العمل هذه ليعكس عملية إصدار المنتج الخاصة بك.',
             checklists: [
                 {
-                    title: 'Prepare code',
+                    title: 'إعداد الكود',
                     items: [
-                        newChecklistItem('Triage and check for pending tickets and PRs to merge'),
-                        newChecklistItem('Start drafting changelog, feature documentation, and marketing materials'),
-                        newChecklistItem('Review and update project dependencies as needed'),
-                        newChecklistItem('QA prepares release testing assignments'),
-                        newChecklistItem('Merge database upgrade'),
+                        newChecklistItem('فرز والتحقق من التذاكر وPRs المعلقة للدمج'),
+                        newChecklistItem('بدء تحضير سجل التغييرات، وتوثيق الميزات، والمواد التسويقية'),
+                        newChecklistItem('مراجعة وتحديث تبعيات المشروع حسب الحاجة'),
+                        newChecklistItem('QA يعد جداول الاختبارات للإصدار'),
+                        newChecklistItem('دمج ترقية قاعدة البيانات'),
                     ],
                 },
                 {
-                    title: 'Release testing',
+                    title: 'اختبار الإصدار',
                     items: [
-                        newChecklistItem('Cut a Release Candidate (RC-1)'),
-                        newChecklistItem('QA runs smoke tests on the pre-release build'),
-                        newChecklistItem('QA runs automated load tests and upgrade tests on the pre-release build'),
-                        newChecklistItem('Triage and merge regression bug fixes'),
+                        newChecklistItem('قطع إصدار مرشح (RC-1)'),
+                        newChecklistItem('QA يقوم باختبارات الدخان على البناء المسبق للإصدار'),
+                        newChecklistItem('QA يقوم باختبارات الحمل الآلية واختبارات الترقية على البناء المسبق للإصدار'),
+                        newChecklistItem('فرز ودمج إصلاحات الأخطاء التراجعية'),
                     ],
                 },
                 {
-                    title: 'Prepare release for production',
+                    title: 'إعداد الإصدار للإنتاج',
                     items: [
-                        newChecklistItem('QA final approves the release'),
-                        newChecklistItem('Cut the final release build and publish'),
-                        newChecklistItem('Deploy changelog, upgrade notes, and feature documentation'),
-                        newChecklistItem('Confirm minimum server requirements are updated in documentation'),
-                        newChecklistItem('Update release download links in relevant docs and webpages'),
-                        newChecklistItem('Publish announcements and marketing'),
+                        newChecklistItem('QA يوافق على الإصدار في النهاية'),
+                        newChecklistItem('قطع البناء النهائي للإصدار ونشره'),
+                        newChecklistItem('نشر سجل التغييرات، وملاحظات الترقية، وتوثيق الميزات'),
+                        newChecklistItem('تأكيد تحديث المتطلبات الدنيا للسيرفر في التوثيق'),
+                        newChecklistItem('تحديث روابط تنزيل الإصدار في المستندات والصفحات المرتبطة'),
+                        newChecklistItem('نشر الإعلانات والتسويق'),
                     ],
                 },
                 {
-                    title: 'Post-release',
+                    title: 'بعد الإصدار',
                     items: [
-                        newChecklistItem('Schedule a release retrospective'),
-                        newChecklistItem('Add dates for the next release to the release calendar and communicate to stakeholders'),
-                        newChecklistItem('Compose release metrics'),
-                        newChecklistItem('Prepare security update communications'),
-                        newChecklistItem('Archive the incident channel and create a new one for the next release'),
+                        newChecklistItem('جدولة محادثة مراجعة الإصدار'),
+                        newChecklistItem('إضافة تواريخ الإصدار القادم إلى تقويم الإصدار والتواصل مع الأطراف المعنية'),
+                        newChecklistItem('إعداد مقاييس الإصدار'),
+                        newChecklistItem('إعداد اتصالات تحديث الأمان'),
+                        newChecklistItem('أرشفة قناة الحادث وإنشاء قناجديدة للإصدار القادم'),
                     ],
                 },
             ],
             create_public_playbook_run: false,
-            channel_name_template: 'Release (vX.Y)',
+            channel_name_template: 'الإصدار (vX.Y)',
             message_on_join_enabled: true,
             message_on_join:
-                mtrim`Hello and welcome!
-
-                This channel was created as part of the **Product Release** playbook and is where conversations related to this release are held. You can customize this message using markdown so that every new channel member can be welcomed with helpful context and resources.`,
+                mtrim`مرحبًا وأهلًا بك!
+            
+                تم إنشاء هذه القناة كجزء من كتيب **إصدار المنتج** وهي المكان الذي تجري فيه المحادثات المتعلقة بهذا الإصدار. يمكنك تخصيص هذه الرسالة باستخدام ماركداون حتى يتمكن كل عضو جديد من القناة من تلقي ترحيب مع معلومات وموارد مفيدة.`,
             run_summary_template_enabled: true,
             run_summary_template:
-                mtrim`**About**
-                - Version number: TBD
-                - Target-date: TBD
-
-                **Resources**
-                - Jira filtered view: [link TBD](#)
-                - Blog post draft: [link TBD](#)`,
+                mtrim`**حول**
+                - رقم الإصدار: قيد التحديد
+                - التاريخ المستهدف: قيد التحديد
+            
+                **الموارد**
+                - عرض مصفاة Jira: [رابط قيد التحديد](#)
+                - مسودة منشور المدونة: [رابط قيد التحديد](#)`,
             reminder_message_template:
-                mtrim`### Changes since last update
+                mtrim`### التغييرات منذ آخر تحديث
                 -
-
-                ### Outstanding PRs
+            
+                ### PRs المعلقة
                 - `,
-            reminder_timer_default_seconds: 24 * 60 * 60, // 24 hours
+            reminder_timer_default_seconds: 24 * 60 * 60, // 24 ساعة
             retrospective_template:
-                mtrim`### Start
+                mtrim`### بدء
                 -
-
-                ### Stop
+            
+                ### إيقاف
                 -
-
-                ### Keep
+            
+                ### الحفاظ
                 - `,
-            retrospective_reminder_interval_seconds: 0, // Once
+            retrospective_reminder_interval_seconds: 0, // مرة واحدة
         },
     },
     {
-        title: 'Incident Resolution',
-        description: 'Resolving incidents requires speed and accuracy. Streamline your processes for rapid response and resolution.',
+        title: 'حل الحوادث',
+        description: 'حل الحوادث يتطلب السرعة والدقة. قم بتدفق عملياتك للاستجابة والحل بسرعة.',
         icon: <DumpsterFire/>,
         author: <MattermostLogo/>,
         color: '#33997014',
         template: {
             ...emptyPlaybook(),
-            title: 'Incident Resolution',
-            description: 'Customize this playbook to reflect your own incident resolution process.',
+            title: 'حل الحوادث',
+            description: 'قم بتخصيص  خطة العمل هذه ليعكس عملية حل الحوادث الخاصة بك.',
             checklists: [
                 {
-                    title: 'Setup for triage',
+                    title: 'إعداد للفرز',
                     items: [
-                        newChecklistItem('Add on-call engineer to channel'),
-                        newChecklistItem('Start bridge call', '', '/zoom start'),
-                        newChecklistItem('Update description with current situation'),
-                        newChecklistItem('Create an incident ticket', '', '/jira create'),
-                        newChecklistItem('Assign severity in description (ie. #sev-2)'),
-                        newChecklistItem('(If #sev-1) Notify @vip'),
+                        newChecklistItem('إضافة مهندس الدور على القناة'),
+                        newChecklistItem('بدء مكالمة الجسر', '', '/zoom start'),
+                        newChecklistItem('تحديث الوصف بالوضع الحالي'),
+                        newChecklistItem('إنشاء تذكرة حادث', '', '/jira create'),
+                        newChecklistItem('تعيين الخطورة في الوصف (مثل #sev-2)'),
+                        newChecklistItem('(إذا #sev-1) إشعار @vip'),
                     ],
                 },
                 {
-                    title: 'Investigate cause',
+                    title: 'التحقيق في السبب',
                     items: [
-                        newChecklistItem('Add suspected causes here and check off if eliminated'),
+                        newChecklistItem('إضافة الأسباب المشتبه بها هنا والتحقق إذا تم القضاء عليها'),
                     ],
                 },
                 {
-                    title: 'Resolution',
+                    title: 'الحل',
                     items: [
-                        newChecklistItem('Confirm issue has been resolved'),
-                        newChecklistItem('Notify customer success managers'),
-                        newChecklistItem('(If sev-1) Notify leader team'),
+                        newChecklistItem('تأكيد حل المشكلة'),
+                        newChecklistItem('إشعار مدراء نجاح العملاء'),
+                        newChecklistItem('(إذا sev-1) إشعار فريق القيادة'),
                     ],
                 },
                 {
-                    title: 'Retrospective',
+                    title: 'المراجعة',
                     items: [
-                        newChecklistItem('Send out survey to participants'),
-                        newChecklistItem('Schedule post-mortem meeting'),
-                        newChecklistItem('Save key messages as timeline entries'),
-                        newChecklistItem('Publish retrospective report'),
+                        newChecklistItem('إرسال استبيان للمشاركين'),
+                        newChecklistItem('جدولة اجتماع ما بعد التحليل'),
+                        newChecklistItem('حفظ الرسائل الرئيسية كإدخالات خط الزمن'),
+                        newChecklistItem('نشر تقرير المراجعة'),
                     ],
                 },
             ],
             create_public_playbook_run: false,
-            channel_name_template: 'Incident: <name>',
+            channel_name_template: 'حادث: <name>',
             message_on_join_enabled: true,
             message_on_join:
-                mtrim`Hello and welcome!
-
-                This channel was created as part of the **Incident Resolution** playbook and is where conversations related to this release are held. You can customize this message using markdown so that every new channel member can be welcomed with helpful context and resources.`,
+            mtrim`مرحبًا وأهلًا بك!
+    
+            تم إنشاء هذه القناة كجزء من كتيب **حل الحوادث** وهي المكان الذي تجري فيه المحادثات المتعلقة بهذا الإصدار. يمكنك تخصيص هذه الرسالة باستخدام ماركداون حتى يتمكن كل عضو جديد من القناة من تلقي ترحيب مع معلومات وموارد مفيدة.`,
             run_summary_template_enabled: true,
             run_summary_template:
-                mtrim`**Summary**
-
-                **Customer impact**
-
-                **About**
-                - Severity: #sev-1/2/3
-                - Responders:
-                - ETA to resolution:`,
+            mtrim`**ملخص**
+    
+            **تأثير العميل**
+    
+            **حول**
+            - الخطورة: #sev-1/2/3
+            - المستجيبون:
+            - موعد الانتهاء المتوقع:`,
             reminder_message_template: '',
-            reminder_timer_default_seconds: 60 * 60, // 1 hour
+            reminder_timer_default_seconds: 60 * 60, // 1 ساعة
             retrospective_template:
-                mtrim`### Summary
-                This should contain 2-3 sentences that give a reader an overview of what happened, what was the cause, and what was done. The briefer the better as this is what future teams will look at first for reference.
-
-                ### What was the impact?
-                This section describes the impact of this playbook run as experienced by internal and external customers as well as stakeholders.
-
-                ### What were the contributing factors?
-                This playbook may be a reactive protocol to a situation that is otherwise undesirable. If that's the case, this section explains the reasons that caused the situation in the first place. There may be multiple root causes - this helps stakeholders understand why.
-
-                ### What was done?
-                This section tells the story of how the team collaborated throughout the event to achieve the outcome. This will help future teams learn from this experience on what they could try.
-
-                ### What did we learn?
-                This section should include perspective from everyone that was involved to celebrate the victories and identify areas for improvement. For example: What went well? What didn't go well? What should be done differently next time?
-
-                ### Follow-up tasks
-                This section lists the action items to turn learnings into changes that help the team become more proficient with iterations. It could include tweaking the playbook, publishing the retrospective, or other improvements. The best follow-ups will have a clear owner assigned as well as due date.
-
-                ### Timeline highlights
-                This section is a curated log that details the most important moments. It can contain key communications, screen shots, or other artifacts. Use the built-in timeline feature to help you retrace and replay the sequence of events.`,
-            retrospective_reminder_interval_seconds: 24 * 60 * 60, // 24 hours
+            mtrim`### ملخص
+            يجب أن يحتوي هذا على 2-3 جمل تعطي القارئ نظرة عامة على ما حدث، وما هو السبب، وما تم القيام به. كلما كان الملخص أقصر كلما كان أفضل حيث سيكون هذا ما سينظر إليه الفرق المستقبلية للرجوع إليه.
+    
+            ### ما هو التأثير؟
+            يصف هذا القسم تأثير تشغيل  خطة العمل هذه كما شعر به العملاء الداخليون والخارجيون بالإضافة إلى الأطراف المعنية.
+    
+            ### ما هي العوامل المساهمة؟
+            قد يكون  خطة العمل هذه بروتوكول تفاعلي لموقف غير مرغوب فيه. إذا كان الأمر كذلك، يشرح هذا القسم الأسباب التي تسببت في الموقف في المقام الأول. قد يكون هناك عدة أسباب جذرية - هذا يساعد الأطراف المعنية على فهم ذلك.
+    
+            ### ما تم القيام به؟
+            يحكي هذا القسم قصة كيفية تعاون الفريق خلال الحدث لتحقيق النتيجة. سيساعد هذا الفرق المستقبلية على تعلم من هذه التجربة على ما يمكن تجربته.
+    
+            ### ماذا تعلمنا؟
+            يجب أن يتضمن هذا القسم وجهات نظر من كل من شارك للاحتفال بالانتصارات وتحديد مجالات التحسين. على سبيل المثال: ما الذي سار بشكل جيد؟ ما الذي لم يسير بشكل جيد؟ ما الذي يجب القيام به بشكل مختلف في المرة القادمة؟
+    
+            ### مهام المتابعة
+            يسرد هذا القسم العناصر الفعلية لتحويل التعلمات إلى تغييرات تساعد الفريق على أن يصبح أكثر مهارة مع التكرارات. يمكن أن تتضمن تعديل الكتيب، نشر المراجعة، أو تحسينات أخرى. أفضل المتابعات ستكون لها مالك واضح معين وكذلك تاريخ استحقاق.
+    
+            ### أبرز مراحل الخط الزمني
+            هذا القسم هو سجل منتقى يفصل أهم اللحظات. يمكن أن يحتوي على اتصالات رئيسية، لقطات شاشة، أو مستندات أخرى. استخدم ميزة الخط الزمني المدمجة لمساعدتك في إعادة التتبع وإعادة تشغيل تسلسل الأحداث.`,
+            retrospective_reminder_interval_seconds: 24 * 60 * 60, // 24 ساعة
             signal_any_keywords_enabled: true,
-            signal_any_keywords: ['sev-1', 'sev-2', '#incident', 'this is serious'],
+            signal_any_keywords: ['sev-1', 'sev-2', '#incident', 'هذا خطير'],
         },
     },
     {
-        title: 'Customer Onboarding',
-        description: 'Create a standardized, smooth onboarding experience for new customers to get them up and running quickly. ',
+        title: 'إدخال العميل',
+        description: 'أنشئ تجربة إدخال قياسية وسلسة للعملاء الجدد لتشغيلهم بسرعة.',
         icon: <Handshake/>,
         color: '#3C507A14',
         author: <MattermostLogo/>,
         template: {
             ...emptyPlaybook(),
-            title: 'Customer Onboarding',
-            description: mtrim`New Mattermost customers are onboarded following a process similar to this playbook.
-
-            Customize this playbook to reflect your own customer onboarding process.`,
+            title: 'إدخال العميل',
+            description: mtrim`يتم إدخال عملاء Sofachat الجدد وفقًا لعملية مشابهة ل خطة العمل هذه.
+        
+            قم بتخصيص  خطة العمل هذه ليعكس عملية إدخال العميل الخاصة بك.`,
             checklists: [
                 {
-                    title: 'Sales to Post-Sales Handoff',
+                    title: 'تسليم المبيعات إلى ما بعد المبيعات',
                     items: [
-                        newChecklistItem('AE intro CSM and CSE to key contacts'),
-                        newChecklistItem('Create customer account Drive folder'),
-                        newChecklistItem('Welcome email within 24hr of Closed Won'),
-                        newChecklistItem('Schedule initial kickoff call with customer'),
-                        newChecklistItem('Create account plan (Tier 1 or 2)'),
-                        newChecklistItem('Send discovery Survey'),
+                        newChecklistItem('مقدمة من AE لـ CSM و CSE للجهات الرئيسية المتصلة'),
+                        newChecklistItem('إنشاء مجلد حساب العميل في Drive'),
+                        newChecklistItem('رسالة ترحيبية خلال 24 ساعة من الفوز بالصفقة'),
+                        newChecklistItem('جدولة مكالمة افتتاحية مع العميل'),
+                        newChecklistItem('إنشاء خطة الحساب (الطبقة 1 أو 2)'),
+                        newChecklistItem('إرسال استبيان الاكتشاف'),
                     ],
                 },
                 {
-                    title: 'Customer Technical Onboarding',
+                    title: 'إدخال تقني للعميل',
                     items: [
-                        newChecklistItem('Schedule technical discovery call'),
-                        newChecklistItem('Review current Zendesk tickets and updates'),
-                        newChecklistItem('Log customer technical details in Salesforce'),
-                        newChecklistItem('Confirm customer received technical discovery summary package'),
-                        newChecklistItem('Send current Mattermost “Pen Test” report to customer'),
-                        newChecklistItem('Schedule plugin/integration planning session'),
-                        newChecklistItem('Confirm data migration plans'),
-                        newChecklistItem('Extend Mattermost with integrations'),
-                        newChecklistItem('Confirm functional & load test plans'),
-                        newChecklistItem('Confirm team/channel organization'),
-                        newChecklistItem('Sign up for Mattermost blog for releases and announcements'),
-                        newChecklistItem('Confirm next upgrade version'),
+                        newChecklistItem('جدولة مكالمة اكتشاف تقني'),
+                        newChecklistItem('مراجعة التذاكر الحالية في Zendesk والتحديثات'),
+                        newChecklistItem('تسجيل تفاصيل تقنية العميل في Salesforce'),
+                        newChecklistItem('تأكيد استلام العميل لحزمة ملخص الاكتشاف التقني'),
+                        newChecklistItem('إرسال تقرير "اختبار القلم" الحالي لـ Sofachat إلى العميل'),
+                        newChecklistItem('جدولة جلسة تخطيط الإضافات/التكاملات'),
+                        newChecklistItem('تأكيد خطط الترحيل البيانات'),
+                        newChecklistItem('توسيع Sofachat بالتكاملات'),
+                        newChecklistItem('تأكيد خطط اختبار الوظائف والحمل'),
+                        newChecklistItem('تأكيد تنظيم الفرق/القنوات'),
+                        newChecklistItem('الاشتراك في مدونة Sofachat للإصدارات والإعلانات'),
+                        newChecklistItem('تأكيد الإصدار التالي للترقية'),
                     ],
                 },
                 {
-                    title: 'Go-Live',
+                    title: 'الانطلاق',
                     items: [
-                        newChecklistItem('Order Mattermost swag package for project team'),
-                        newChecklistItem('Confirm end-user roll-out plan'),
-                        newChecklistItem('Confirm customer go-live'),
-                        newChecklistItem('Perform post go-live retrospective'),
+                        newChecklistItem('طلب حزمة Sofachat swag لفريق المشروع'),
+                        newChecklistItem('تأكيد خطة التوزيع على المستخدمين النهائيين'),
+                        newChecklistItem('تأكيد انطلاق العميل'),
+                        newChecklistItem('إجراء مراجعة ما بعد الانطلاق'),
                     ],
                 },
                 {
-                    title: 'Optional value prompts after go-live',
+                    title: 'مطالبات القيمة الاختيارية بعد الانطلاق',
                     items: [
-                        newChecklistItem('Intro playbooks and boards'),
-                        newChecklistItem('Inform upgrading Mattermost 101'),
-                        newChecklistItem('Share tips & tricks w/ DevOps focus'),
-                        newChecklistItem('Share tips & tricks w/ efficiency focus'),
-                        newChecklistItem('Schedule quarterly roadmap review w/ product team'),
-                        newChecklistItem('Review with executives (Tier 1 or 2)'),
+                        newChecklistItem('مقدمة للكتيبات واللوحات'),
+                        newChecklistItem('إعلام عن ترقية Sofachat 101'),
+                        newChecklistItem('مشاركة نصائح وحيل مع تركيز DevOps'),
+                        newChecklistItem('مشاركة نصائح وحيل مع تركيز الكفاءة'),
+                        newChecklistItem('جدولة مراجعة الخارطة الزمنية للربع مع فريق المنتج'),
+                        newChecklistItem('مراجعة مع المدراء التنفيذيين (الطبقة 1 أو 2)'),
                     ],
                 },
             ],
             create_public_playbook_run: false,
-            channel_name_template: 'Customer Onboarding: <name>',
+            channel_name_template: 'إدخال العميل: <name>',
             message_on_join_enabled: true,
             message_on_join:
-                mtrim`Hello and welcome!
-
-                This channel was created as part of the **Customer Onboarding** playbook and is where conversations related to this customer are held. You can customize this message using markdown so that every new channel member can be welcomed with helpful context and resources.`,
+                mtrim`مرحبًا وأهلًا بك!
+        
+                تم إنشاء هذه القناة كجزء من كتيب **إدخال العميل** وهي المكان الذي تجري فيه المحادثات المتعلقة بهذا العميل. يمكنك تخصيص هذه الرسالة باستخدام ماركداون حتى يتمكن كل عضو جديد من القناة من تلقي ترحيب مع معلومات وموارد مفيدة.`,
             run_summary_template_enabled: true,
             run_summary_template:
-                mtrim`**About**
-                - Account name: [TBD](#)
-                - Salesforce opportunity: [TBD](#)
-                - Order type:
-                - Close date:
-
-                **Team**
-                - Sales Rep: @TBD
-                - Customer Success Manager: @TBD`,
+                mtrim`**حول**
+                - اسم الحساب: [قيد التحديد](#)
+                - فرصة Salesforce: [قيد التحديد](#)
+                - نوع الطلب:
+                - تاريخ الإغلاق:
+        
+                **الفريق**
+                - ممثل المبيعات: @قيد التحديد
+                - مدير نجاح العميل: @قيد التحديد`,
             retrospective_template:
-                mtrim`### What went well?
+                mtrim`### ما سار بشكل جيد؟
                 -
-
-                ### What could have gone better?
+        
+                ### ماذا يمكن أن يسير بشكل أفضل؟
                 -
-
-                ### What should be changed for next time?
+        
+                ### ما الذي يجب تغييره في المرة القادمة؟
                 - `,
-            retrospective_reminder_interval_seconds: 0, // Once
+            retrospective_reminder_interval_seconds: 0, // مرة واحدة
         },
     },
     {
-        title: 'Employee Onboarding',
-        description: 'Set your new hires up for success with input from your entire organization, in one smooth process.',
+        title: 'إدخال الموظف',
+        description: 'قم بإعداد موظفيك الجدد للنجاح من خلال مدخلات من كامل منظمتك، في عملية واحدة مستقرة.',
         icon: <SmileySunglasses/>,
         color: '#FFBC1F14',
         author: <MattermostLogo/>,
         template: {
             ...emptyPlaybook(),
-            title: 'Employee Onboarding',
-            description: mtrim`Every new Mattermost Staff member completes this onboarding process when joining the company.
-
-            Customize this playbook to reflect your own employee onboarding process.`,
+            title: 'إدخال الموظف',
+            description: mtrim`كل عضو جديد في فريق Sofachat يكمل عملية الإدخال هذه عند الانضمام إلى الشركة.
+        
+            قم بتخصيص  خطة العمل هذه ليعكس عملية إدخال الموظف الخاصة بك.`,
             checklists: [
                 {
-                    title: 'Pre-day one',
+                    title: 'قبل اليوم الأول',
                     items: [
-                        newChecklistItem('Complete the [Onboarding Systems Form in the IT HelpDesk](https://helpdesk.mattermost.com/support/home)'),
+                        newChecklistItem('أكمل نموذج [Onboarding Systems Form في IT HelpDesk](https://helpdesk.Sofachat.com/support/home)'),
                         newChecklistItem(
-                            'Complete the onboarding template prior to your new staff member\'s start date',
-                            mtrim`Managers play a large role in setting their new direct report up for success and making them feel welcome by setting clear expectations and preparing the team and internal stakeholders for how they can help new colleagues integrate and connect organizationally and culturally.
-                                * **Onboarding Objectives:** Clarify the areas and projects your new team member should focus on in their first 90 days. Use the _Overview of the Role_ that you completed when you opened the role.
-                                * **AOR clarity:** Identify AORs that are relevant for your new hire, and indicate any AORs that your new hire will [DRI](https://handbook.mattermost.com/company/about-mattermost/list-of-terms#dri) or act as backup DRI. As needed, clarify AOR transitions with internal stakeholders ahead of your new hire's start date. See [AOR page](https://handbook.mattermost.com/operations/operations/areas-of-responsibility) Include the interview panel and their respective focus areas.
-                                * **Assign an Onboarding Peer:** The Onboarding Peer or peers should be an individual or group of people that can help answer questions about the team, department and Mattermost. In many ways, an Onboarding Peer may be an [end-boss](https://handbook.mattermost.com/company/about-mattermost/mindsets#mini-boss-end-boss) for specific AORs. Managers should ask permission of a potential Onboarding Peer prior to assignment.`,
+                            'أكمل نموذج الإدخال قبل تاريخ بدء العضو الجديد للفريق',
+                            mtrim`المديرون يلعبون دورًا كبيرًا في تحديد التوقعات الواضحة وإعداد الفريق والأطراف الداخلية المعنية لكيفية مساعدة الزملاء الجدد على الاندماج والاتصال من الناحية التنظيمية والثقافية.
+                                * **أهداف الإدخال:** حدد المجالات والمشاريع التي يجب أن يركز عليها العضو الجديد للفريق في أول 90 يومًا. استخدم _نظرة عامة على الدور_ الذي أكملته عند فتح الوظيفة.
+                                * **وضوح AOR:** حدد AORs المرتبطة بالموظف الجديد، وحدد أي AORs سيكون الموظف الجديد [DRI](https://handbook.Sofachat.com/company/about-mattermost/list-of-terms#dri) أو سيعمل كنسخة احتياطية DRI. حسب الحاجة، حدد انتقالات AOR مع الأطراف الداخلية قبل بدء الموظف الجديد. انظر [صفحة AOR](https://handbook.mattermost.com/operations/operations/areas-of-responsibility) قم بتضمين لوحة المقابلة ومجالات التركيز الخاصة بهم.
+                                * **تعيين زميل إدخال:** يجب أن يكون زميل الإدخال أو الزملاء فردًا أو مجموعة من الأشخاص الذين يمكنهم الإجابة على الأسئلة حول الفريق والقسم وSofachat. في كثير من الطرق، قد يكون زميل الإدخال [end-boss](https://handbook.mattermost.com/company/about-mattermost/mindsets#mini-boss-end-boss) لـ AORs محددة. يجب على المديرين طلب إذن محتمل من زميل الإدخال قبل التعيين.`,
                         ),
                     ],
                 },
                 {
-                    title: 'Week one',
+                    title: 'الأسبوع الأول',
                     items: [
                         newChecklistItem(
-                            'Introduce our new staff member in the [Welcome Channel](https://community.mattermost.com/private-core/channels/welcome)',
-                            mtrim`All new hires are asked to complete a short bio and share with their Managers. Managers should include this bio in the welcome message.
-
-                                Be sure to include the hashtag \#newcolleague when posting your message.`,
+                            'قدم عضو فريقنا الجديد في [قناة الترحيب](https://community.mattermost.com/private-core/channels/welcome)',
+                            mtrim`يُطلب من جميع الموظفين الجدد إكمال نبذة قصيرة ومشاركتها مع مديريهم. يجب على المديرين تضمين هذه النبذة في رسالة الترحيب.
+        
+                                    تأكد من تضمين الهاشتاج \#newcolleague عند نشر رسالتك.`,
                         ),
                         newChecklistItem(
-                            'Review Team [AORs](https://handbook.mattermost.com/operations/operations/areas-of-responsibility)',
-                            'This is also a good time to review the new hire\'s AOR and onboarding expectations.'
+                            'مراجعة [AORs](https://handbook.mattermost.com/operations/operations/areas-of-responsibility) للفريق',
+                            'هذا هو أيضًا وقت جيد لمراجعة AOR وتوقعات الإدخال للموظف الجديد.'
                         ),
                         newChecklistItem(
-                            'Review list of key internal partners',
-                            'These are individuals the new staff member will work with and who the new staff member should set up meetings with during their first month or two.',
+                            'مراجعة قائمة الشركاء الداخليين الرئيسيين',
+                            'هؤلاء هم الأشخاص الذين سيعمل معهم الموظف الجديد والذين يجب على الموظف الجديد جدولة اجتماعات معهم خلال الشهرين الأولين.',
                         ),
                         newChecklistItem(
-                            'Add to Mattermost channels',
-                            'Ensure your team member is added to appropriate channels based on team and role.',
+                            'إضافة إلى قنوات Sofachat',
+                            'تأكد من إضافة عضو الفريق إلى القنوات المناسبة بناءً على الفريق والدور.',
                         ),
                         newChecklistItem(
-                            'Share team cadences',
-                            'Review specific team cadences, operating norms and relevant playbooks.',
+                            'مشاركة الأوتار الزمنية للفريق',
+                            'مراجعة الأوتار الزمنية المحددة للفريق، والقواعد  قاعدة العملية و خطط العمل ذات الصلة.',
                         ),
                     ],
                 },
                 {
-                    title: 'Month one',
+                    title: 'الشهر الأول',
                     items: [
-                        newChecklistItem('Review Company and Team [V2MOMs](https://handbook.mattermost.com/company/how-to-guides-for-staff/how-to-v2mom)'),
-                        newChecklistItem('Align on role responsibilities and expectations'),
+                        newChecklistItem('مراجعة [V2MOMs](https://handbook.mattermost.com/company/how-to-guides-for-staff/how-to-v2mom) للشركة والفريق'),
+                        newChecklistItem('تواءم على مسؤوليات الدور والتوقعات'),
                         newChecklistItem(
-                            'COM Introduction',
-                            'New team members are invited to introduce themselves at [COM](https://handbook.mattermost.com/operations/operations/company-cadence#customer-obsession-meeting-aka-com) during their second week. If they\'re not comfortable doing their own introduction, Managers will do so on their behalf.',
+                            'مقدمة COM',
+                            'يُدعى أعضاء الفريق الجدد لتقديم أنفسهم في [COM](https://handbook.mattermost.com/operations/operations/company-cadence#customer-obsession-meeting-aka-com) خلال الأسبوع الثاني. إذا لم يكونوا مرتاحين لإجراء مقدمتهم الخاصة، سيقوم المديرون بذلك نيابة عنهم.',
                         ),
                         newChecklistItem(
                             '[Shoulder Check](https://handbook.mattermost.com/company/about-mattermost/mindsets#shoulder-check)',
-                            'Assess potential blindspots and ask for feedback.',
+                            'تقييم النقاط العمياء المحتملة وطلب التعليقات.',
                         ),
                     ],
                 },
                 {
-                    title: 'Month two',
+                    title: 'الشهر الثاني',
                     items: [
                         newChecklistItem(
-                            '90-day New Colleague Feedback',
-                            'Managers are notified to kick off the [New Colleague Review Process](https://handbook.mattermost.com/contributors/onboarding#new-colleague-90-day-feedback-process) on their new staff member\'s 65th day. The feedback will include a summary of the new staff member\'s responsibilities during the first 90 days. Managers should communicate these responsibilities to the new staff member during their first week.',
+                            'تعليقات الزميل الجديد لمدة 90 يومًا',
+                            'يتم إشعار المديرين لبدء [عملية تعليقات الزميل الجديد](https://handbook.mattermost.com/contributors/onboarding#new-colleague-90-day-feedback-process) على الموظف الجديد في اليوم الـ65 من بدءه. ستتضمن التعليقات ملخصًا لمسؤوليات الموظف الجديد خلال أول 90 يومًا. يجب على المديرين تواصل هذه المسؤوليات مع الموظف الجديد خلال أسبوعهم الأول.',
                         ),
                     ],
                 },
                 {
-                    title: 'Month three',
+                    title: 'الشهر الثالث',
                     items: [
-                        newChecklistItem('Deliver New Colleague Feedback'),
+                        newChecklistItem('تقديم تعليقات الزميل الجديد'),
                     ],
                 },
             ],
             create_public_playbook_run: false,
-            channel_name_template: 'Employee Onboarding: <name>',
+            channel_name_template: 'إدخال الموظف: <name>',
             message_on_join_enabled: true,
             message_on_join:
-                mtrim`Hello and welcome!
-
-                This channel was created as part of the **Employee Onboarding** playbook and is where conversations related to onboarding this employee are held. You can customize this message using markdown so that every new channel member can be welcomed with helpful context and resources.`,
+                mtrim`مرحبًا وأهلًا بك!
+        
+                تم إنشاء هذه القناة كجزء من كتيب **إدخال الموظف** وهي المكان الذي تجري فيه المحادثات المتعلقة بإدخال هذا الموظف. يمكنك تخصيص هذه الرسالة باستخدام ماركداون حتى يتمكن كل عضو جديد من القناة من تلقي ترحيب مع معلومات وموارد مفيدة.`,
             run_summary_template: '',
-            reminder_timer_default_seconds: 7 * 24 * 60 * 60, // once a week
+            reminder_timer_default_seconds: 7 * 24 * 60 * 60, // مرة كل أسبوع
             retrospective_template:
-                mtrim`### What went well?
+                mtrim`### ما سار بشكل جيد؟
                 -
-
-                ### What could have gone better?
+        
+                ### ماذا يمكن أن يسير بشكل أفضل؟
                 -
-
-                ### What should be changed for next time?
+        
+                ### ما الذي يجب تغييره في المرة القادمة؟
                 - `,
-            retrospective_reminder_interval_seconds: 0, // Once
+            retrospective_reminder_interval_seconds: 0, // مرة واحدة
         },
     },
     {
-        title: 'Feature Lifecycle',
-        description: 'Create transparent workflows across development teams to ensure your feature development process is seamless.',
+        title: 'دورة حياة الميزة',
+        description: 'أنشئ سير عمل شفاف عبر فرق التطوير لضمان أن عملية تطوير الميزة لديك سلسة.',
         icon: <Gears/>,
         color: '#62697E14',
         author: <MattermostLogo/>,
         template: {
             ...emptyPlaybook(),
-            title: 'Feature Lifecycle',
-            description: 'Customize this playbook to reflect your own feature lifecycle process.',
+            title: 'دورة حياة الميزة',
+            description: 'قم بتخصيص  خطة العمل هذه ليعكس عملية دورة حياة الميزة الخاصة بك.',
             checklists: [
                 {
-                    title: 'Plan',
+                    title: 'التخطيط',
                     items: [
-                        newChecklistItem('Explain what the problem is and why it\'s important'),
-                        newChecklistItem('Explain proposal for potential solutions'),
-                        newChecklistItem('List out open questions and assumptions'),
-                        newChecklistItem('Set the target release date'),
+                        newChecklistItem('اشرح ما هي المشكلة ولماذا تعتبر مهمة'),
+                        newChecklistItem('اشرح الاقتراحات لحلول محتملة'),
+                        newChecklistItem('ضع قائمة بالأسئلة المفتوحة والافتراضات'),
+                        newChecklistItem('حدد تاريخ الإصدار المستهدف'),
                     ],
                 },
                 {
-                    title: 'Kickoff',
+                    title: 'البدء',
                     items: [
                         newChecklistItem(
-                            'Choose an engineering owner for the feature',
-                            mtrim`Expectations for the owner:
-                            - Responsible for setting and meeting expectation for target dates' +
-                            - Post weekly status update' +
-                            - Demo feature at R&D meeting' +
-                            - Ensure technical quality after release`,
+                            'اختر مالك هندسي للميزة',
+                            mtrim`التوقعات من المالك:
+                            - مسؤول عن تحديد وتلبية التوقعات لتواريخ المستهدفة' +
+                            - نشر تحديثات الحالة الأسبوعية' +
+                            - تجريب الميزة في اجتماع R&D' +
+                            - ضمان الجودة التقنية بعد الإصدار`,
                         ),
-                        newChecklistItem('Identify and invite contributors to the feature channel'),
+                        newChecklistItem('حدد ودعوة المساهمين إلى قناة الميزة'),
                         newChecklistItem(
-                            'Schedule kickoff and recurring check-in meetings',
-                            mtrim`Expectations leaving the kickoff meeting:
-                            - Alignment on the precise problem in addition to rough scope and target
-                            - Clear next steps and deliverables for each individual`,
-                        ),
-                    ],
-                },
-                {
-                    title: 'Build',
-                    items: [
-                        newChecklistItem(
-                            'Align on scope, quality, and time.',
-                            'There are likely many different efforts to achieve alignment here, this checkbox just symbolizes sign-off from contributors.',
-                        ),
-                        newChecklistItem('Breakdown feature milestones and add them to this checklist'),
-                    ],
-                },
-                {
-                    title: 'Ship',
-                    items: [
-                        newChecklistItem('Update documentation and user guides'),
-                        newChecklistItem('Merge all feature and bug PRs to master'),
-                        newChecklistItem(
-                            'Demo to the community',
-                            mtrim`For example:
-                            - R&D meeting
-                            - Developer meeting
-                            - Company wide meeting`
-                        ),
-                        newChecklistItem('Build telemetry dashboard to measure adoption'),
-                        newChecklistItem(
-                            'Create launch kit for go-to-market teams',
-                            mtrim`Including but not exclusive to:
-                            - release blog post
-                            - one-pager
-                            - demo video`,
+                            'جدولة اجتماعات البدء والمتابعة المتكررة',
+                            mtrim`التوقعات بعد اجتماع البدء:
+                            - توافق على المشكلة الدقيقة بالإضافة إلى النطاق العام والهدف
+                            - خطوات واضحة للمرحلة التالية والنتائج لكل فرد`,
                         ),
                     ],
                 },
                 {
-                    title: 'Follow up',
+                    title: 'البناء',
                     items: [
-                        newChecklistItem('Schedule meeting to review adoption metrics and user feedback'),
-                        newChecklistItem('Plan improvements and next iteration'),
+                        newChecklistItem(
+                            'توافق على النطاق والجودة والوقت.',
+                            'هناك على الأرجح العديد من الجهود المختلفة لتحقيق التوافق هنا، هذا المربع يمثل فقط الموافقة من المساهمين.',
+                        ),
+                        newChecklistItem('تفكيك مراحل الميزة وإضافتها إلى قائمة المهام هذه'),
+                    ],
+                },
+                {
+                    title: 'الشحن',
+                    items: [
+                        newChecklistItem('تحديث التوثيق ودليل المستخدم'),
+                        newChecklistItem('دمج جميع PRs الميزة والأخطاء إلى الماجستير'),
+                        newChecklistItem(
+                            'تجريب للمجتمع',
+                            mtrim`على سبيل المثال:
+                            - اجتماع R&D
+                            - اجتماع المطورين
+                            - اجتماع شامل للشركة`
+                        ),
+                        newChecklistItem('بناء لوحة تحكم التليفون لقياس الاعتماد'),
+                        newChecklistItem(
+                            'إنشاء مجموعة إطلاق لفرق التسويق',
+                            mtrim`بما في ذلك ولكن ليس حصرًا:
+                            - منشور مدونة إصدار
+                            - ورقة واحدة
+                            - فيديو تجريبي`,
+                        ),
+                    ],
+                },
+                {
+                    title: 'المتابعة',
+                    items: [
+                        newChecklistItem('جدولة اجتماع لمراجعة مقاييس الاعتماد وتعليقات المستخدم'),
+                        newChecklistItem('تخطيط التحسينات والتكرار التالي'),
                     ],
                 },
             ],
             create_public_playbook_run: true,
-            channel_name_template: 'Feature: <name>',
+            channel_name_template: 'الميزة: <name>',
             message_on_join_enabled: true,
             message_on_join:
-                mtrim`Hello and welcome!
-
-                This channel was created as part of the **Feature Lifecycle** playbook and is where conversations related to developing this feature are held. You can customize this message using Markdown so that every new channel member can be welcomed with helpful context and resources.`,
+                mtrim`مرحبًا وأهلًا بك!
+        
+                تم إنشاء هذه القناة كجزء من كتيب **دورة حياة الميزة** وهي المكان الذي تجري فيه المحادثات المتعلقة بتطوير هذه الميزة. يمكنك تخصيص هذه الرسالة باستخدام Markdown حتى يتمكن كل عضو جديد من القناة من تلقي ترحيب مع معلومات وموارد مفيدة.`,
             run_summary_template_enabled: true,
             run_summary_template:
-                mtrim`**One-liner**
-                <ie. Enable users to prescribe a description template so it\'s consistent for every run and therefore easier to read.>
-
-                **Targets release**
-                - Code complete: date
-                - Customer release: month
-
-                **Resources**
-                - Jira Epic: <link>
-                - UX prototype: <link>
-                - Technical design: <link>
-                - User docs: <link>`,
+                mtrim`**واحد لينر**
+                <مثلًا: تمكين المستخدمين من تحديد قالب وصف حتى يكون متسقًا لكل تشغيل وبالتالي أسهل في القراءة.>
+        
+                **الإصدار المستهدف**
+                - الكود الكامل: تاريخ
+                - إصدار العميل: شهر
+        
+                **الموارد**
+                - Jira Epic: <رابط>
+                - نموذج UX: <رابط>
+                - التصميم التقني: <رابط>
+                - وثائق المستخدم: <رابط>`,
             reminder_message_template:
-                mtrim`### Demo
-                <Insert_GIF_here>
-
-                ### Changes since last week
+                mtrim`### تجريب
+                <أدرج_GIF_هنا>
+        
+                ### التغييرات منذ الأسبوع الماضي
                 -
-
-                ### Risks
+        
+                ### المخاطر
                 - `,
-            reminder_timer_default_seconds: 24 * 60 * 60, // 1 day
+            reminder_timer_default_seconds: 24 * 60 * 60, // 1 يوم
             retrospective_template:
-                mtrim`### Start
+                mtrim`### بدء
                 -
-
-                ### Stop
+        
+                ### إيقاف
                 -
-
-                ### Keep
+        
+                ### الحفاظ
                 - `,
-            retrospective_reminder_interval_seconds: 0, // Once
+            retrospective_reminder_interval_seconds: 0, // مرة واحدة
         },
     },
     {
         title: 'Bug Bash',
-        description: 'Customize this playbook to reflect your own bug bash process.',
+        description: 'قم بتخصيص  خطة العمل هذه ليعكس عملية Bug Bash الخاصة بك.',
         icon: <BugSearch/>,
         color: '#7A560014',
         author: <MattermostLogo/>,
         template: {
             ...emptyPlaybook(),
             title: 'Bug Bash',
-            description: mtrim`About once or twice a month, the Mattermost Playbooks team uses this playbook to run a 50 minute bug-bash testing the latest version of Playbooks.
-
-            Customize this playbook to reflect your own bug bash process.`,
+            description: mtrim`حوالي مرة أو مرتين في الشهر، يستخدم فريق Sofachat خطط عمل  خطة العمل هذه لتشغيل اختبار Bug Bash لمدة 50 دقيقة لاختبار أحدث إصدار من خطط عمل.
+        
+            قم بتخصيص  خطة العمل هذه ليعكس عملية Bug Bash الخاصة بك.`,
             create_public_playbook_run: true,
             channel_name_template: 'Bug Bash (vX.Y)',
             checklists: [
                 {
-                    title: 'Setup Testing Environment (Before Meeting)',
+                    title: 'إعداد بيئة الاختبار (قبل الاجتماع)',
                     items: [
                         newChecklistItem(
-                            'Deploy the build in question to community-daily',
+                            'نشر البناء المعني على community-daily',
                         ),
                         newChecklistItem(
-                            'Spin up a cloud instance running T0',
+                            'تشغيل نسخة سحابي يعمل على T0',
                             '',
                             '/cloud create playbooks-bug-bash-t0 --license te --image mattermost/mattermost-team-edition --test-data --version master',
                         ),
                         newChecklistItem(
-                            'Spin up a cloud instance running E0',
+                            'تشغيل نسخة سحابي يعمل على E0',
                             '',
                             '/cloud create playbooks-bug-bash-e0 --license te --test-data --version master',
                         ),
                         newChecklistItem(
-                            'Spin up a cloud instance running E10',
+                            'تشغيل نسخة سحابي يعمل على E10',
                             '',
                             '/cloud create playbooks-bug-bash-e10 --license e10 --test-data --version master',
                         ),
                         newChecklistItem(
-                            'Spin up a cloud instance running E20',
+                            'تشغيل نسخة سحابي يعمل على E20',
                             '',
                             '/cloud create playbooks-bug-bash-e20 --license e20 --test-data --version master',
                         ),
                         newChecklistItem(
-                            'Enable Open Servers & CRT for all Cloud Instances',
-                            mtrim`From a command line, login to each server in turn via [\`mmctl\`](https://github.com/mattermost/mmctl), and configure, e.g.:
+                            'تمكين Open Servers & CRT لجميع النسخ السحابية',
+                            mtrim`من سطر الأوامر، قم بتسجيل الدخول إلى كل سيرفر على التوالي عبر [\`mmctl\`](https://github.com/mattermost/mmctl)، وتكوين، على سبيل المثال:
                                 \`\`\`
                                 for server in playbooks-bug-bash-t0 playbooks-bug-bash-e0 playbooks-bug-bash-e10 playbooks-bug-bash-e20; do
                                     mmctl auth login https://$server.test.mattermost.cloud --name $server --username sysadmin --password-file <(echo "Sys@dmin123");
@@ -614,8 +615,8 @@ export const PresetTemplates: PresetTemplate[] = preprocessTemplates([
                                 \`\`\``,
                         ),
                         newChecklistItem(
-                            'Install the plugin to each instance',
-                            mtrim`From a command line, login to each server in turn via [\`mmctl\`](https://github.com/mattermost/mmctl), and configure, e.g.:
+                            'تثبيت البرنامج المساعد على كل نسخة',
+                            mtrim`من سطر الأوامر، قم بتسجيل الدخول إلى كل سيرفر على التوالي عبر [\`mmctl\`](https://github.com/mattermost/mmctl)، وتكوين، على سبيل المثال:
                                 \`\`\`
                                 for server in playbooks-bug-bash-t0 playbooks-bug-bash-e0 playbooks-bug-bash-e10 playbooks-bug-bash-e20; do
                                     mmctl auth login https://$server.test.mattermost.cloud --name $server --username sysadmin --password-file <(echo "Sys@dmin123");
@@ -624,66 +625,66 @@ export const PresetTemplates: PresetTemplate[] = preprocessTemplates([
                                 \`\`\``,
                         ),
                         newChecklistItem(
-                            'Announce Bug Bash',
-                            'Make sure the team and community is aware of the upcoming bug bash.',
+                            'إعلان Bug Bash',
+                            'تأكد من أن الفريق والمجتمع على علم بـ Bug Bash القادم.',
                         ),
                     ],
                 },
                 {
-                    title: 'Define Scope (10 Minutes)',
+                    title: 'تحديد النطاق (10 دقائق)',
                     items: [
                         newChecklistItem(
-                            'Review GitHub commit diff',
+                            'مراجعة تفاصيل الإيداع في GitHub',
                         ),
                         newChecklistItem(
-                            'Identify new features to add to target testing areas checklist',
+                            'تحديد الميزات الجديدة لإضافتها إلى قائمة مناطق الاختبار المستهدفة',
                         ),
                         newChecklistItem(
-                            'Identify existing functionality to add to target testing areas checklist',
+                            'تحديد الوظائف الحالية لإضافتها إلى قائمة مناطق الاختبار المستهدفة',
                         ),
                         newChecklistItem(
-                            'Add relevant T0/E0/E10/E20 permutations',
+                            'إضافة تباديل T0/E0/E10/E20 ذات الصلة',
                         ),
                         newChecklistItem(
-                            'Assign owners',
+                            'تعيين المالكين',
                         ),
                     ],
                 },
                 {
-                    title: 'Target Testing Areas (30 Minutes)',
+                    title: 'مناطق الاختبار المستهدفة (30 دقيقة)',
                     items: [],
                 },
                 {
-                    title: 'Triage (10 Minutes)',
+                    title: 'الفرز (10 دقائق)',
                     items: [
                         newChecklistItem(
-                            'Review issues to identify what to fix for the upcoming release',
+                            'مراجعة المشكلات لتحديد ما يجب إصلاحه للإصدار القادم',
                         ),
                         newChecklistItem(
-                            'Assign owners for all required bug fixes',
+                            'تعيين مالكين لجميع إصلاحات الأخطاء المطلوبة',
                         ),
                     ],
                 },
                 {
-                    title: 'Clean Up',
+                    title: 'التنظيف',
                     items: [
                         newChecklistItem(
-                            'Clean up cloud instance running T0',
+                            'تنظيف النسخة السحابي الذي يعمل على T0',
                             '',
                             '/cloud delete playbooks-bug-bash-t0',
                         ),
                         newChecklistItem(
-                            'Clean up cloud instance running E0',
+                            'تنظيف النسخة السحابي الذي يعمل على E0',
                             '',
                             '/cloud delete playbooks-bug-bash-e0',
                         ),
                         newChecklistItem(
-                            'Clean up cloud instance running E10',
+                            'تنظيف النسخة السحابي الذي يعمل على E10',
                             '',
                             '/cloud delete playbooks-bug-bash-e10',
                         ),
                         newChecklistItem(
-                            'Clean up cloud instance running E20',
+                            'تنظيف النسخة السحابي الذي يعمل على E20',
                             '',
                             '/cloud delete playbooks-bug-bash-e20',
                         ),
@@ -691,95 +692,95 @@ export const PresetTemplates: PresetTemplate[] = preprocessTemplates([
                 },
             ],
             status_update_enabled: true,
-            message_on_join: mtrim`Welcome! We're using this channel to run a 50 minute bug-bash the new version of Playbooks. The first 10 minutes will be spent identifying scope and ownership, followed by 30 minutes of targeted testing in the defined areas, and 10 minutes of triage.
-
-            When you find an issue, post a new thread in this channel tagged #bug and share any screenshots and reproduction steps. The owner of this bash will triage the messages into tickets as needed.`,
+            message_on_join: mtrim`مرحبًا! نحن نستخدم هذه القناة لتشغيل اختبار Bug Bash لمدة 50 دقيقة لأحدث إصدار من خطط عمل. سيتم قضاء العشر دقائق الأولى في تحديد النطاق والملكية، تليها 30 دقيقة من الاختبار المستهدف في المناطق المحددة، و 10 دقائق من الفرز.
+        
+            عندما تجد مشكلة، قم بنشر موضوع جديد في هذه القناة مع علامة #bug وشارك أي لقطات شاشة وخطوات إعادة الإنتاج. سيقوم مالك هذا الاختبار بفرز الرسائل إلى تذاكر حسب الحاجة.`,
             message_on_join_enabled: true,
             retrospective_enabled: false,
             run_summary_template_enabled: true,
-            run_summary_template: mtrim`The playbooks team is executing a bug bash to qualify the next shipping version.
-
-            As we encounter issues, simply start a new thread and tag with #bug (or #feature) to make tracking these easier.
-
-            **Release Link**: TBD
-            **Zoom**: TBD
-            **Triage Filter**: https://mattermost.atlassian.net/secure/RapidBoard.jspa?rapidView=68&projectKey=MM&view=planning.nodetail&quickFilter=332&issueLimit=100
-
-            | Servers |
+            run_summary_template: mtrim`فريق خطط عمل ينفذ اختبار Bug Bash لتأهيل الإصدار القادم.
+        
+            عندما نواجه مشكلات، ببساطة ابدأ موضوع جديد وعلّمه بـ #bug (أو #feature) لتسهيل تتبع هذه.
+        
+            **رابط الإصدار**: قيد التحديد
+            **Zoom**: قيد التحديد
+            **فلتر الفرز**: https://mattermost.atlassian.net/secure/RapidBoard.jspa?rapidView=68&projectKey=MM&view=planning.nodetail&quickFilter=332&issueLimit=100
+        
+            | السيرفرات |
             | -- |
             | [T0](https://playbooks-bug-bash-t0.test.mattermost.cloud) |
             | [E0](https://playbooks-bug-bash-e0.test.mattermost.cloud) |
             | [E10](https://playbooks-bug-bash-e10.test.mattermost.cloud) |
             | [E20](https://playbooks-bug-bash-e20.test.mattermost.cloud) |
-
-            Login with:
-
-            | Username | Password |
+        
+            سجل الدخول باستخدام:
+        
+            | اسم المستخدم | كلمة المرور |
             | -- | -- |
             | sysadmin | Sys@dmin123 |`,
         },
     },
     {
-        title: 'Learn how to use playbooks',
-        label: 'Recommended For Beginners',
+        title: 'تعلم كيفية استخدام  خطط العمل',
+        label: 'موصى به للمبتدئين',
         labelColor: '#E5AA1F29-#A37200',
         icon: <LightBulb/>,
         color: '#FFBC1F14',
         author: <MattermostLogo/>,
-        description: 'New to playbooks? This playbook will help you get familiar with playbooks, configurations, and playbook runs.',
+        description: 'جديد في  خطط العمل؟ سيساعدك  خطة العمل هذه على التعرف على  خطط العمل والتكوينات وتشغيل  خطط العمل.',
         template: {
             ...emptyPlaybook(),
-            title: 'Learn how to use playbooks',
-            description: mtrim`Use this playbook to learn more about playbooks. Go through this page to check out the contents or simply select ‘start a test run’ in the top right corner.`,
+            title: 'تعلم كيفية استخدام  خطط العمل',
+            description: mtrim`استخدم هذا  خطة العمل لمعرفة المزيد حول  خطط العمل. اذهب من خلال هذه الصفحة للتحقق من المحتويات أو ببساطة اختر 'بدء تشغيل اختبار' في الزاوية اليمنى العليا.`,
             create_public_playbook_run: true,
-            channel_name_template: 'Onboarding Run',
+            channel_name_template: 'تشغيل الإدخال',
             checklists: [
                 {
-                    title: 'Learn',
+                    title: 'تعلم',
                     items: [
                         newChecklistItem(
-                            'Try editing the run name or description in the top section of this page.',
+                            'جرب تحرير اسم  قاعدة العمل أو الوصف في القسم العلوي من هذه الصفحة.',
                         ),
                         newChecklistItem(
-                            'Try checking off the first two tasks!',
+                            'جرب التحقق من المهام الأولى الأولى!',
                         ),
                         newChecklistItem(
-                            'Assign a task to yourself or another member.',
+                            'قم بتعيين مهمة لنفسك أو لأحد الأعضاء الآخرين.',
                         ),
                         newChecklistItem(
-                            'Post your first status update.',
+                            'انشر تحديث حالتك الأول.',
                         ),
                         newChecklistItem(
-                            'Complete your first checklist!',
+                            'أكمل قائمة المهام الأولى!',
                         ),
                     ],
                 },
                 {
-                    title: 'Collaborate',
+                    title: 'التعاون',
                     items: [
                         newChecklistItem(
-                            'Invite other team members that you’d like to collaborate with.',
+                            'قم بدعوة أعضاء الفريق الآخرين الذين ترغب في التعاون معهم.',
                         ),
                         newChecklistItem(
-                            'Skip a task.',
+                            'تخطي مهمة.',
                         ),
                         newChecklistItem(
-                            'Finish the run.',
+                            'أكمل  قاعدة العمل.',
                         ),
                     ],
                 },
             ],
             status_update_enabled: true,
-            reminder_timer_default_seconds: 50 * 60, // 50 minutes
+            reminder_timer_default_seconds: 50 * 60, // 50 دقيقة
             message_on_join: '',
             message_on_join_enabled: false,
             retrospective_enabled: false,
             run_summary_template_enabled: true,
-            run_summary_template: mtrim`This summary area helps everyone involved gather context at a glance. It supports markdown syntax just like a channel message, just click to edit and try it out!
-
-            - Start date: 20 Dec, 2021
-            - Target date: To be determined
-            - User guide: Playbooks docs`,
+            run_summary_template: mtrim`هذه المنطقة الملخصية تساعد الجميع المشاركين على جمع السياق بسرعة. إنها تدعم بناء الجملة ماركداون تمامًا مثل رسالة قناة، فقط انقر للتحرير وجربها!
+        
+            - تاريخ البدء: 20 ديسمبر، 2021
+            - التاريخ المستهدف: لم يحدد بعد
+            - دليل المستخدم: وثائق  خطط العمل`,
         },
     },
 ]);

@@ -61,6 +61,7 @@ const Section = ({
 
 const Wrapper = styled.div`
     padding: 0.5rem 3rem 2rem;
+     color: var(--center-channel-color);
 `;
 
 const Header = styled.div<{ $clickable?: boolean; $hoverEffect?: boolean; $hasSubtitle?: boolean; $hideHeaderRight?: boolean; }>`
@@ -86,24 +87,26 @@ const Header = styled.div<{ $clickable?: boolean; $hoverEffect?: boolean; $hasSu
     margin-top: 20px;
     margin-bottom: ${({$hasSubtitle}) => ($hasSubtitle ? '2px' : '10px')};
     padding: 4px 0 4px 8px;
+    color: var(--center-channel-color);
 `;
 
 const HeaderRight = styled.div``;
 
 const Title = styled.h3`
-    font-family: Metropolis, sans-serif;
     font-size: 20px;
-    font-weight: 600;
+    font-weight: normal;
     line-height: 28px;
     white-space: nowrap;
     margin: 0;
     position: relative;
+     color: var(--center-channel-color);
 
     ${CopyLink} {
-        margin-left: -1.25em;
+     html[dir="ltr"] & {
+        margin-left: -1.25em;position: absolute;}
         opacity: 1;
         transition: opacity ease 0.15s;
-        position: absolute;
+        
         left: -10px;
     }
 

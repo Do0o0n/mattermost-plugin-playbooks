@@ -80,26 +80,30 @@ const Cell = ({type, value, target}: CellProps) => {
 };
 
 const NAValue = styled.div`
-    font-weight: 400;
+    
     line-height: 16px;
     color: var(--error-text);
 `;
 
 const NormalText = styled.div`
-    font-weight: 400;
+    
     line-height: 16px;
+        font-family: 'GraphikArabic';
+    font-weight: normal;
 `;
 
 const SmallText = styled.div`
-    font-weight: 400;
+    
     font-size: 11px;
     line-height: 16px;
     color: rgba(var(--center-channel-color-rgb), 0.64);
     margin: 5px 0;
+    font-family: 'GraphikArabic';
+    font-weight: normal;
 `;
 
 const RunName = styled.div`
-    font-weight: 600;
+    font-weight: normal;
     font-size: 14px;
     line-height: 16px;
 `;

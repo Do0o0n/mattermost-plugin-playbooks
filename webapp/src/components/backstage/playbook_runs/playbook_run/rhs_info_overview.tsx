@@ -89,6 +89,7 @@ interface Props {
 }
 
 const StyledArrowIcon = styled(ArrowForwardIosIcon)`
+  html[dir="rtl"] & {transform: rotate(-180deg);}
     margin-left: 7px;
 `;
 
@@ -286,6 +287,8 @@ const OverviewItemName = styled.div`
     display: flex;
     align-items: center;
     gap: 11px;
+    font-weight: normal;
+    font-family: 'GraphikArabic';
 `;
 
 const Participants = styled.div`
@@ -297,6 +300,9 @@ const FollowersWrapper = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
+      html[dir="rtl"] & {
+           direction: ltr;
+}
 `;
 
 const RequestJoinButton = styled(TertiaryButton)`
@@ -310,6 +316,9 @@ const ParticipantsContainer = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
+     html[dir="rtl"] & {
+           direction: ltr;
+}
 `;
 
 interface ChannelRowProps {

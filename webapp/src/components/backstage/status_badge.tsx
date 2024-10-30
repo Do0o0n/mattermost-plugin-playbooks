@@ -23,8 +23,8 @@ const Badge = styled.div<BadgeProps>`
     font-size: 12px;
     border-radius: 4px;
     padding: 0 8px;
-    font-weight: 600;
-    margin: 2px;
+    font-weight: normal;
+    margin: 4px;
 
     color: var(--sidebar-text);
 

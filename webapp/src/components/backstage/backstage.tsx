@@ -67,7 +67,8 @@ const MainContainer = styled.div<{noContainerScroll: boolean}>`
     grid-auto-flow: column;
     grid-template-columns: max-content auto;
     ${({noContainerScroll}) => (noContainerScroll ? css`
-        height: 100%;
+        height: 111vh;
+        font-family: 'GraphikArabic';
     ` : css`
         min-height: 100%;
     `)}

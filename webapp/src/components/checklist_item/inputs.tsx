@@ -89,7 +89,7 @@ export const CollapsibleChecklistItemDescription = (props: {expanded: boolean, c
 const ChecklistItemDescription = styled.div<{height: string}>`
     font-size: 12px;
     font-style: normal;
-    font-weight: 400;
+        font-family: 'GraphikArabic';
     line-height: 16px;
     color: rgba(var(--center-channel-color-rgb), 0.72);
 
@@ -143,6 +143,7 @@ const CancelButton = styled(TertiaryButton)`
     margin-left: 8px;
     border-radius: 4px;
     font-size: 12px;
+    font-weight: normal;
 `;
 
 const SaveButton = styled(PrimaryButton)`
@@ -151,4 +152,5 @@ const SaveButton = styled(PrimaryButton)`
     margin-left: 8px;
     border-radius: 4px;
     font-size: 12px;
+    font-weight: normal;
 `;

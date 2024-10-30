@@ -10,7 +10,7 @@ export interface Option {
 }
 
 export const SelectedButton = styled.button`
-    font-weight: 600;
+    font-weight: normal;
     height: 40px;
     padding: 0 4px 0 12px;
     border-radius: 4px;

@@ -40,7 +40,7 @@ const NoContentTextContainer = styled.div`
 `;
 
 const NoContentTitle = styled.h2`
-    font-family: Open Sans;
+    font-family: 'GraphikArabic';
     font-style: normal;
     font-weight: normal;
     font-size: 28px;
@@ -49,7 +49,7 @@ const NoContentTitle = styled.h2`
 `;
 
 const NoContentDescription = styled.h5`
-    font-family: Open Sans;
+    font-family: 'GraphikArabic';
     font-style: normal;
     font-weight: normal;
     font-size: 16px;

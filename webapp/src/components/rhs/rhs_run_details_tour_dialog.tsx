@@ -60,7 +60,7 @@ const Graphic = styled.div`
 `;
 
 const Title = styled.h1`
-    font-family: Metropolis;
+    
     font-size: 22px;
     line-height: 28px;
 

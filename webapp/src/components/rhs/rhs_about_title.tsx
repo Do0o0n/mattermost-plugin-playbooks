@@ -32,6 +32,8 @@ const TitleWrapper = styled.div`
 const StatusBadgeWrapper = styled(StatusBadge) `
     margin-right: 75px;
     top: -3px;
+    font-family: 'GraphikArabic';
+    font-weight: normal;
 `;
 
 const RHSAboutTitle = (props: Props) => {
@@ -154,12 +156,13 @@ const TitleInput = styled.input`
     color: var(--center-channel-color);
     font-size: 18px;
     line-height: 24px;
-    font-weight: 600;
+    font-family: 'GraphikArabic';
+    font-weight: normal;
 `;
 
 const ErrorMessage = styled.div`
     color: var(--dnd-indicator);
-
+font-weight: normal;
     font-size: 12px;
     line-height: 16px;
 
@@ -182,7 +185,7 @@ export const DefaultRenderedTitle = styled.div`
     line-height: 24px;
 
     font-size: 18px;
-    font-weight: 600;
+    font-weight: normal;
 
     color: var(--center-channel-color);
 

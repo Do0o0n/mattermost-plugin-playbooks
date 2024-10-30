@@ -277,24 +277,23 @@ Here are some resources that you may find helpful:
 [Mattermost community channel](https://community.mattermost.com/core/channels/developers-playbooks)
 [User guide and documentation](https://docs.mattermost.com/guides/playbooks.html)`;
 
-export const defaultRetrospectiveTemplate = `### Summary
-This should contain 2-3 sentences that give a reader an overview of what happened, what was the cause, and what was done. The briefer the better as this is what future teams will look at first for reference.
+export const defaultRetrospectiveTemplate = `### الملخص
+يجب أن يحتوي هذا القسم على 2-3 جمل تقدم للقارئ نظرة عامة حول ما حدث، وما كان السبب، وما الذي تم عمله. كلما كان أقصر كان أفضل، لأن هذا ما ستنظر إليه الفرق المستقبلية أولاً للمرجعية.
 
-### What was the impact?
-This section describes the impact of this playbook run as experienced by internal and external customers as well as stakeholders.
+### ما كان التأثير؟
+يصف هذا القسم تأثير تنفيذ هذا الدليل كما شعر به العملاء الداخليون والخارجيون وكذلك أصحاب المصلحة.
 
-### What were the contributing factors?
-This playbook may be a reactive protocol to a situation that is otherwise undesirable. If that's the case, this section explains the reasons that caused the situation in the first place. There may be multiple root causes - this helps stakeholders understand why.
+### ما هي العوامل المساهمة؟
+قد يكون هذا الدليل بروتوكولًا تفاعليًا لموقف غير مرغوب فيه. إذا كان هذا هو الحال، يشرح هذا القسم الأسباب التي أدت إلى حدوث الموقف في المقام الأول. قد تكون هناك عدة أسباب جذرية - وهذا يساعد أصحاب المصلحة على فهم السبب.
 
-### What was done?
-This section tells the story of how the team collaborated throughout the event to achieve the outcome. This will help future teams learn from this experience on what they could try.
+### ما الذي تم عمله؟
+يشرح هذا القسم كيفية تعاون الفريق خلال الحدث لتحقيق النتيجة. سيساعد ذلك الفرق المستقبلية على التعلم من هذه التجربة فيما يمكنهم تجربته.
 
-### What did we learn?
-This section should include perspective from everyone that was involved to celebrate the victories and identify areas for improvement. For example: What went well? What didn't go well? What should be done differently next time?
+### ماذا تعلمنا؟
+يجب أن يتضمن هذا القسم آراء الجميع الذين شاركوا للاحتفاء بالنجاحات وتحديد مجالات التحسين. على سبيل المثال: ما الذي سار بشكل جيد؟ ما الذي لم يسِر بشكل جيد؟ ما الذي يجب عمله بشكل مختلف في المرة القادمة؟
 
-### Follow-up tasks
-This section lists the action items to turn learnings into changes that help the team become more proficient with iterations. It could include tweaking the playbook, publishing the retrospective, or other improvements. The best follow-ups will have a clear owner as well as due date.
+### المهام اللاحقة
+يُدرج هذا القسم العناصر التي تحوّل الدروس المستفادة إلى تغييرات تساعد الفريق على أن يصبح أكثر كفاءة في التكرارات. يمكن أن يتضمن تعديل الدليل، نشر المراجعة، أو تحسينات أخرى. أفضل المهام اللاحقة ستكون لها مالك واضح وكذلك تاريخ استحقاق.
 
-### Timeline highlights
-This section is a curated log that details the most important moments. It can contain key communications, screen shots, or other artifacts. Use the built-in timeline feature to help you retrace and replay the sequence of events.`;
-
+### أبرز أحداث الخط الزمني
+هذا القسم هو سجل منسق يوضح أهم اللحظات. يمكن أن يحتوي على اتصالات رئيسية، لقطات شاشة، أو أي مستندات أخرى. استخدم ميزة الخط الزمني المدمجة لمساعدتك على إعادة تتبع وإعادة عرض تسلسل الأحداث.`;

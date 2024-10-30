@@ -150,7 +150,7 @@ const FooterExtraInfoContainer = styled.div`
 
     text-align: left;
     font-size: 14px;
-    font-weight: 400;
+    
     line-height: 20px;
     align-items: center;
     margin-right: auto;

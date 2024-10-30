@@ -16,6 +16,7 @@ export const AutomationTitle = styled.div`
     width: 350px;
     align-items: center;
     column-gap: 12px;
+    font-weight: normal;
 `;
 
 export const AutomationLabel = styled.label<{disabled?: boolean}>`
@@ -23,7 +24,7 @@ export const AutomationLabel = styled.label<{disabled?: boolean}>`
     flex-direction: row;
     align-items: center;
     column-gap: 12px;
-    font-weight: inherit;
+    font-weight: normal;
     margin-bottom: 0;
     cursor: ${({disabled}) => (disabled ? 'default' : 'pointer')};
 `;

@@ -93,7 +93,7 @@ const Label = styled.div`
 
 const Title = styled.div`
     font-size: 14px;
-    font-weight: 600;
+    font-weight: normal;
     color: var(--center-channel-color);
     margin-top: 2px;
 `;

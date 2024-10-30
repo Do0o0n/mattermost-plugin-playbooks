@@ -206,7 +206,7 @@ const EditContainer = styled.div`
 const Bold = styled.span`
     display: flex;
     align-items: center;
-    font-weight: 600;
+    font-weight: normal;
 
     svg {
         margin: 0 5px;
@@ -214,7 +214,7 @@ const Bold = styled.span`
 `;
 
 const Title = styled.div`
-    font-weight: 600;
+    font-weight: normal;
     margin: 0 0 8px 0;
 `;
 

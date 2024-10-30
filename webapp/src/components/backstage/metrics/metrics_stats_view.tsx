@@ -58,7 +58,7 @@ const Header = styled.div`
     display: flex;
     align-items: center;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: normal;
     line-height: 24px;
     color: var(--center-channel-color);
     margin: 24px 0 8px 0;
@@ -75,6 +75,7 @@ const Icon = styled.div`
 
 const Title = styled.div`
     white-space: nowrap;
+    margin: 3px;
 `;
 
 const HorizontalLine = styled.div`

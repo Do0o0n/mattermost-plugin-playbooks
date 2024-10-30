@@ -188,7 +188,7 @@ interface RunProps {
 
 const Run = styled.div<RunProps>`
     font-size: 12px;
-    font-weight: bold;
+    font-weight: normal;
     display: inline;
     color: var(--link-color);
     cursor: pointer;
@@ -246,7 +246,7 @@ const CommandIcon = styled.i`
 `;
 
 const CommandTextContainer = styled.div`
-    font-weight: 400;
+    
     font-size: 12px;
     line-height: 15px;
     margin-right: 4px;

@@ -96,7 +96,7 @@ export const Participants = ({playbookRun, role, teamName}: Props) => {
                 </StyledSecondaryButton>
 
                 <StyledPrimaryButton onClick={() => setShowAddParticipantsModal(true)}>
-                    <AddParticipantIcon color={'var(--button-color)'}/>
+                    <AddParticipantIcon color={'var(--sidebar-text-rgb)'}/>
                     {formatMessage({defaultMessage: 'Add'})}
                 </StyledPrimaryButton>
 
@@ -265,15 +265,18 @@ const Container = styled.div`
 const ParticipantsNumber = styled.div`
     color: var(--center-channel-color);
     font-size: 14px;
-    font-weight: 600;
+    font-weight: normal;
     line-height: 20px;
     margin-right: auto;
+    font-family: 'GraphikArabic';
+       html[dir="rtl"] & {
+    padding: 4px;}
 `;
 
 const SectionTitle = styled.div`
     color: rgba(var(--sys-center-channel-color-rgb), 0.56);
     font-size: 12px;
-    font-weight: 600;
+    font-weight: normal;
     line-height: 16px;
     text-transform: uppercase;
     margin-top: 16px;
@@ -299,7 +302,10 @@ const ListSection = styled.div`
 
 const HoverButtonContainer = styled.div`
     position: absolute;
-    right: 20px;
+    html[dir="rtl"] & {
+    left: 20px;}
+     html[dir="ltr"] & {
+    right: 20px;}
 `;
 
 const ProfileWrapper = styled.div<{manageMode: boolean}>`
@@ -338,7 +344,10 @@ const StyledSecondaryButton = styled(TertiaryButton)`
     height: 32px;
     font-size: 12px;
     line-height: 10px;
-    margin-right: 8px;
+      html[dir="ltr"] & {
+    margin-right: 8px;}
+     html[dir="rtl"] & {
+   margin-left: 8px;}
 `;
 
 const StyledPrimaryButton = styled(PrimaryButton)`
@@ -352,7 +361,11 @@ const StyledPrimaryButton = styled(PrimaryButton)`
 const AddParticipantIcon = styled(AccountPlusOutlineIcon)`
     height: 14.4px;
     width: 14.4px;
-    margin-right: 3px;
+       html[dir="ltr"] & {
+    margin-right: 3px;}
+     html[dir="rtl"] & {
+    margin-left: 3px;}
+    fill: var(--button-color);
 `;
 
 const ParticipantButton = styled.div`

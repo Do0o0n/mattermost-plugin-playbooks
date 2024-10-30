@@ -28,20 +28,24 @@ import {useToaster} from 'src/components/backstage/toast_banner';
 import {ToastStyle} from 'src/components/backstage/toast';
 
 const SmallText = styled.div`
-    font-weight: 400;
+    
     font-size: 11px;
     line-height: 16px;
     color: rgba(var(--center-channel-color-rgb), 0.64);
     margin: 5px 0;
+    font-family: 'GraphikArabic';
+    font-weight: normal;
 `;
 
 const NormalText = styled.div`
-    font-weight: 400;
+    
     line-height: 16px;
+        font-family: 'GraphikArabic';
+    font-weight: normal;
 `;
 
 const SmallProfile = styled(Profile)`
-    font-weight: 400;
+    
     font-size: 12px;
     line-height: 16px;
 
@@ -60,7 +64,7 @@ const SmallStatusBadge = styled(StatusBadge)`
 `;
 
 const RunName = styled.div`
-    font-weight: 600;
+    font-weight: normal;
     font-size: 14px;
     line-height: 16px;
 `;

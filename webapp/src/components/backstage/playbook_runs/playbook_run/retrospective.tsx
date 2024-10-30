@@ -223,4 +223,5 @@ const PublishButton = styled(TertiaryButton)`
     font-size: 12px;
     height: 32px;
     padding: 0 16px;
+    margin-right:5px;
 `;

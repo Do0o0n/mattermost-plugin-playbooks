@@ -151,7 +151,7 @@ const Header = styled.div`
 `;
 
 const Body = styled.div`
-    font-weight: 400;
+    
     font-size: 14px;
     line-height: 20px;
     text-align: center;
@@ -169,7 +169,7 @@ const ExtraInfoContainer = styled.div`
     flex-direction: row;
 
     font-size: 14px;
-    font-weight: 400;
+    
     line-height: 20px;
     justify-content: center;
     color: rgba(var(--center-channel-color-rgb), 0.56);

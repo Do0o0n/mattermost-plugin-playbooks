@@ -8,7 +8,7 @@ import styled from 'styled-components';
 
 import {KeyCodes, isKeyPressed} from 'src/utils';
 
-import Tooltip from 'src/components/widgets/tooltip';
+// import Tooltip from 'src/components/widgets/tooltip';
 
 interface Props {
     label?: string;
@@ -38,7 +38,7 @@ const FakeBtn = styled.span`
     box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.08);
     border-radius: 4px;
     padding: 12px 20px;
-    font-weight: 600;
+    font-weight: normal;
     font-size: 14px;
     line-height: 14px;
 `;
@@ -72,7 +72,7 @@ const Thumbnail = styled.div<ThumbnailProps>`
 
 type LabelProps = {$color?: string;}
 const Label = styled.label<LabelProps>`
-    font-weight: 600;
+    font-weight: normal;
     font-size: 10px;
     line-height: 16px;
     position: absolute;
@@ -85,6 +85,7 @@ const Label = styled.label<LabelProps>`
     color: ${({$color}) => $color?.split('-')[1]};
 `;
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const Author = styled.div`
     position: absolute;
     left: 20px;
@@ -95,6 +96,7 @@ const Description = styled.p`
     font-size: 14px;
     line-height: 20px;
     color: rgba(var(--center-channel-color-rgb), 0.64);
+    font-family: 'GraphikArabic';
 `;
 
 const Detail = styled.div`
@@ -103,8 +105,8 @@ const Detail = styled.div`
 `;
 
 const Title = styled.h5`
-    font-family: Metropolis;
-    font-weight: 600;
+    font-family: 'GraphikArabic';
+    font-weight: normal;
     font-size: 16px;
     line-height: 24px;
     color: var(--center-channel-color);
@@ -116,6 +118,7 @@ const TemplateItem = ({
     label,
     title,
     description,
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     author,
     icon,
     color,
@@ -123,6 +126,7 @@ const TemplateItem = ({
     onSelect,
     ...attrs
 }: Props & HTMLAttributes<HTMLDivElement>) => {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const {formatMessage} = useIntl();
     return (
         <Item
@@ -148,14 +152,14 @@ const TemplateItem = ({
             <Detail>
                 <Title>{title}</Title>
                 <Description>{description}</Description>
-                {author && (
+                {/* {author && (
                     <Tooltip
                         id={`${title}_author_usedby`}
                         content={formatMessage({defaultMessage: 'Used by'})}
                     >
                         <Author>{author}</Author>
                     </Tooltip>
-                )}
+                )} */}
             </Detail>
         </Item>
     );

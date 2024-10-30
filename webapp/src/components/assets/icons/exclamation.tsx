@@ -9,7 +9,7 @@ import Icon from 'src/components/assets/svg';
 const Svg = styled(Icon)`
     width: 34px;
     height: 34px;
-
+font-weight: normal;
     color: var(--dnd-indicator);
 `;
 

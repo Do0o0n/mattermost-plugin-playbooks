@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "babel-plugin-formatjs": "^10.5.18",
+    "eslint-plugin-formatjs": "^5.1.0"
+  },
+  "dependencies": {
+    "react-router-dom": "^5.3.4"
+  }
+}

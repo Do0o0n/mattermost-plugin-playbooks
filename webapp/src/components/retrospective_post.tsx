@@ -105,7 +105,7 @@ const ViewContent = styled.div`
 const Title = styled.div`
     font-size: 12px;
     line-height: 16px;
-    font-weight: 600;
+    font-weight: normal;
     color: rgba(var(--center-channel-color-rgb), 0.64);
     margin: 2px 0px;
 

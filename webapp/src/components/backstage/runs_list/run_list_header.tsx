@@ -10,7 +10,7 @@ import {FetchPlaybookRunsParams} from 'src/types/playbook_run';
 import {SortableColHeader} from 'src/components/sortable_col_header';
 
 const PlaybookRunListHeader = styled.div`
-    font-weight: 600;
+    font-weight: normal;
     font-size: 11px;
     line-height: 36px;
     color: rgba(var(--center-channel-color-rgb), 0.72);

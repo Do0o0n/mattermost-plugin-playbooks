@@ -972,7 +972,7 @@ func (s *PlaybookRunServiceImpl) FinishPlaybookRun(playbookRunID, userID string)
 		return errors.Wrapf(err, "failed to to resolve user %s", userID)
 	}
 
-	message := fmt.Sprintf("@%s marked [%s](%s) as finished.", user.Username, playbookRunToModify.Name, GetRunDetailsRelativeURL(playbookRunID))
+	message := fmt.Sprintf("@%s مجموعة [%s](%s) تم الانتهاء منه.", user.Username, playbookRunToModify.Name, GetRunDetailsRelativeURL(playbookRunID))
 	postID := ""
 	post, err := s.poster.PostMessage(playbookRunToModify.ChannelID, message)
 	if err != nil {
@@ -2858,7 +2858,7 @@ func (s *PlaybookRunServiceImpl) buildRetrospectivePost(playbookRunToPublish *Pl
 	}
 
 	return &model.Post{
-		Message:   fmt.Sprintf("@channel Retrospective for [%s](%s) has been published by @%s\n[See the full retrospective](%s)\n", playbookRunToPublish.Name, GetRunDetailsRelativeURL(playbookRunToPublish.ID), publisherUser.Username, retrospectiveURL),
+		Message:   fmt.Sprintf("@المجموعة استرجاع ل [%s](%s) تم  بواسطة @%s\n[شاهد المراجعة الكاملة](%s)\n", playbookRunToPublish.Name, GetRunDetailsRelativeURL(playbookRunToPublish.ID), publisherUser.Username, retrospectiveURL),
 		Type:      "custom_retro",
 		ChannelId: playbookRunToPublish.ChannelID,
 		Props:     props,
@@ -2888,8 +2888,8 @@ func (s *PlaybookRunServiceImpl) CancelRetrospective(playbookRunID, cancelerID s
 		return errors.Wrap(err, "failed to get canceler user")
 	}
 
-	if _, err = s.poster.PostMessage(playbookRunToCancel.ChannelID, "@channel Retrospective for [%s](%s) has been canceled by @%s\n", playbookRunToCancel.Name, GetRunDetailsRelativeURL(playbookRunID), cancelerUser.Username); err != nil {
-		return errors.Wrap(err, "failed to post to channel")
+	if _, err = s.poster.PostMessage(playbookRunToCancel.ChannelID, "@ مجموعة لـ[%s](%s) تم إلغاؤه بواسطة @%s\n", playbookRunToCancel.Name, GetRunDetailsRelativeURL(playbookRunID), cancelerUser.Username); err != nil {
+		return errors.Wrap(err, "فشل في النشر على القناة")
 	}
 
 	event := &TimelineEvent{

@@ -40,7 +40,7 @@ import CheckboxInput from './runs_list/checkbox_input';
 import useConfirmPlaybookArchiveModal from './archive_playbook_modal';
 import NoContentPage from './playbook_list_getting_started';
 import useConfirmPlaybookRestoreModal from './restore_playbook_modal';
-
+import './playbook_list.scss';
 const ContainerMedium = styled.article`
     padding: 0 20px;
     scroll-margin-top: 20px;
@@ -49,13 +49,18 @@ const ContainerMedium = styled.article`
 const PlaybookListContainer = styled.div`
     color: rgba(var(--center-channel-color-rgb), 0.9);
     position: relative;
-    height: 100%;
+    height: 100vh;
     overflow-y: hidden;
 `;
 
 const ScrollContainer = styled.div`
   height: 100%;
   overflow-y: auto;
+    &::-webkit-scrollbar {
+    width: 0px;
+   
+  }
+
 `;
 
 const TableContainer = styled.div`
@@ -82,7 +87,6 @@ const Sub = styled.p`
     font-size: 16px;
     line-height: 24px;
     color: rgba(var(--center-channel-color-rgb), 0.72);
-    font-weight: 400;
     max-width: 650px;
     margin-top: 12px;
 `;
@@ -93,18 +97,23 @@ const AltCreatePlaybookHeader = styled(BackstageSubheader)`
     display: flex;
     flex-direction: column;
     align-items: center;
+     font-weight: normal;
+    font-family: 'GraphikArabic';
 `;
 
 export const AltHeading = styled(Heading)`
-    font-weight: 600;
+    font-weight: normal;
     font-size: 20px;
     line-height: 28px;
     text-align: center;
+    font-family: 'GraphikArabic';
 `;
 
 const AltSub = styled(Sub)`
     text-align: center;
     margin-bottom: 36px;
+      font-weight: normal;
+    font-family: 'GraphikArabic';
 `;
 
 const TitleActions = styled.div`
@@ -120,7 +129,7 @@ const ImportSub = styled(Sub)`
 `;
 
 const ImportLink = styled.a`
-    font-weight: 600;
+    font-weight: normal;
 `;
 
 const PlaybooksListFilters = styled.div`

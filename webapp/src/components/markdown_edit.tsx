@@ -129,7 +129,10 @@ const HoverMenuContainer = styled.div`
     padding: 0px 8px;
     position: absolute;
     height: 32px;
-    right: 2px;
+     html[dir="ltr"] & {
+    right: 2px;}
+     html[dir="rtl"] & {
+    left: 2px;}
     top: 8px;
     z-index: 1;
 `;
@@ -140,7 +143,8 @@ const commonTextStyle = css`
     border-radius: var(--markdown-textbox-radius, 4px);
     font-size: 14px;
     line-height: 20px;
-    font-weight: 400;
+     font-weight: normal;
+    font-family: 'GraphikArabic';
     color: rgba(var(--center-channel-color-rgb), 0.72);
     padding: var(--markdown-textbox-padding, 12px 30px 12px 16px);
 
@@ -197,10 +201,12 @@ export const RenderedText = styled.div`
 
 const PlaceholderText = styled.span`
     font-style: italic;
-    font-weight: 400;
+    
     font-size: 14px;
     line-height: 20px;
     color: rgba(var(--center-channel-color-rgb), 0.56);
+    font-weight: normal;
+    font-family: 'GraphikArabic';
 `;
 
 export default styled(MarkdownEdit)``;

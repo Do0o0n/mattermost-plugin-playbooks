@@ -35,6 +35,6 @@ const StyledOl = styled.ol`
 `;
 
 const Subheader = styled.p`
-    font-weight: 600;
+    font-weight: normal;
     font-size: 14px;
 `;

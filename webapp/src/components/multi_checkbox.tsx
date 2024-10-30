@@ -43,11 +43,14 @@ const Divider = styled.div`
 `;
 
 const Title = styled.div`
-    margin: 0 0 0 20px;
-    font-weight: 600;
+html[dir="ltr"] & {
+    margin: 0 0 0 20px;}
+    font-weight: normal;
     font-size: 12px;
     line-height: 28px;
     color: rgba(var(--center-channel-color-rgb), 0.56);
+    html[dir="rtl"] & {
+    margin-right:20px;}
 `;
 
 export interface CheckboxOption {

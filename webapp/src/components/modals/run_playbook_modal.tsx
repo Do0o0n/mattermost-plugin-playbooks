@@ -23,7 +23,7 @@ import PlaybooksSelector from 'src/components/playbooks_selector';
 import SearchInput from 'src/components/backstage/search_input';
 import {useCanCreatePlaybooksInTeam} from 'src/hooks';
 import {RUN_NAME_MAX_LENGTH} from 'src/constants';
-
+import './styls.scss';
 const ID = 'playbooks_run_playbook_dialog';
 
 export const makeModalDefinition = (
@@ -319,15 +319,19 @@ const ConfigChannelSection = ({teamId, channelMode, channelId, createPublicRun, 
     const linkExistingChannel = channelMode === 'link_existing_channel';
     return (
         <ChannelContainer>
-            <ChannelBlock>
-                <StyledRadioInput
-                    data-testid={'link-existing-channel-radio'}
-                    type='radio'
-                    checked={linkExistingChannel}
-                    onChange={() => onSetChannelMode('link_existing_channel')}
-                />
-                <FormattedMessage defaultMessage='Link to an existing channel'/>
-            </ChannelBlock>
+            <div className='stylsChannelBlock'>
+                <ChannelBlock>
+                    <StyledRadioInput
+                        data-testid={'link-existing-channel-radio'}
+                        type='radio'
+                        checked={linkExistingChannel}
+                        onChange={() => onSetChannelMode('link_existing_channel')}
+                    />
+                    <FormattedMessage
+                        defaultMessage='Link to an existing channel'
+                    />
+                </ChannelBlock>
+            </div>
             {linkExistingChannel && (
                 <SelectorWrapper>
                     <StyledChannelSelector
@@ -344,17 +348,17 @@ const ConfigChannelSection = ({teamId, channelMode, channelId, createPublicRun, 
                     />
                 </SelectorWrapper>
             )}
-
-            <ChannelBlock >
-                <StyledRadioInput
-                    data-testid={'create-channel-radio'}
-                    type='radio'
-                    checked={createNewChannel}
-                    onChange={() => onSetChannelMode('create_new_channel')}
-                />
-                <FormattedMessage defaultMessage='Create a run channel'/>
-            </ChannelBlock>
-
+            <div className='stylsChannelBlock'>
+                <ChannelBlock >
+                    <StyledRadioInput
+                        data-testid={'create-channel-radio'}
+                        type='radio'
+                        checked={createNewChannel}
+                        onChange={() => onSetChannelMode('create_new_channel')}
+                    />
+                    <FormattedMessage defaultMessage='Create a run channel'/>
+                </ChannelBlock>
+            </div>
             {createNewChannel && (
                 <HorizontalSplit>
                     <VerticalSplit>
@@ -404,12 +408,18 @@ const StyledGenericModal = styled(GenericModal)`
             padding: 24px 31px;
             margin-bottom: 0;
             box-shadow: inset 0px -1px 0px rgba(var(--center-channel-color-rgb), 0.16);
+            width: auto;
+             html[dir="rtl"] & { 
+            margin-right: 4px;}
         }
         .modal-content {
             padding: 0px;
+            width: auto !important;
+            overflow: inherit !important;
         }
         .modal-body {
             padding: 24px 31px;
+            width: auto;
         }
         .modal-footer {
            box-shadow: inset 0px -1px 0px rgba(var(--center-channel-color-rgb), 0.16);
@@ -473,8 +483,9 @@ const ChannelBlock = styled.label`
     align-items: center;
     column-gap: 12px;
     align-self: 'flex-start';
-    font-weight: inherit;
+    font-weight: normal;
     margin-bottom: 0;
+    font-weight: normal;
     cursor: pointer;
 `;
 
@@ -492,7 +503,7 @@ const Icon = styled.i<{ active?: boolean, disabled: boolean }>`
 const BigText = styled.div`
     font-size: 14px;
     line-height: 20px;
-    font-weight: 400;
+    
 `;
 
 const HorizontalSplit = styled.div`
@@ -506,7 +517,7 @@ const HeaderButtonWrapper = styled.div`
     margin-right: 30px;
 `;
 const CreatePlaybookButton = styled.button`
-    font-family: 'Open Sans';
+   font-family: 'GraphikArabic';
 `;
 
 const SearchWrapper = styled.div`
@@ -521,7 +532,7 @@ const ErrorMessage = styled.div`
     font-size: 12px;
     line-height: 16px;
     margin-top: -8px;
-    font-weight: 400;
+    
     margin-bottom: 20px !important;
 `;
 

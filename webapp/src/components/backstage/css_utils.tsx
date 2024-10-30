@@ -41,7 +41,8 @@ export function applyTheme(theme: any) {
             'sidebar-text-hover-bg': theme.sidebarTextHoverBg,
             'sidebar-text-active-border': theme.sidebarTextActiveBorder,
             'sidebar-text-active-color': theme.sidebarTextActiveColor,
-            'sidebar-header-bg': theme.sidebarHeaderBg,
+            // eslint-disable-next-line lines-around-comment
+            // 'sidebar-header-bg': theme.sidebarHeaderBg,
             'sidebar-teambar-bg': theme.sidebarTeamBarBg,
             'sidebar-header-text-color': theme.sidebarHeaderTextColor,
             'online-indicator': theme.onlineIndicator,
@@ -53,7 +54,8 @@ export function applyTheme(theme: any) {
             'center-channel-color': theme.centerChannelColor,
             'new-message-separator': theme.newMessageSeparator,
             'link-color': theme.linkColor,
-            'button-bg': theme.buttonBg,
+            // eslint-disable-next-line lines-around-comment
+            // 'button-bg': theme.buttonBg,
             'button-color': theme.buttonColor,
             'error-text': theme.errorTextColor,
             'mention-highlight-bg': theme.mentionHighlightBg,

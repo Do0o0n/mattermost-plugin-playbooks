@@ -56,7 +56,7 @@ const GiantIcon = styled.i<{active?: boolean}>`
     align-items: center;
     justify-content: center;
     width: 40px;
-    height: 40px;
+    height: 37px;
     font-size: 28px;
 	line-height: 28px;
 	color: ${(props) => (props.active ? 'var(--button-bg)' : 'rgba(var(--center-channel-color-rgb), 0.64)')};
@@ -77,7 +77,7 @@ const CheckIcon = styled.i`
 const BigText = styled.div`
 	font-size: 14px;
 	line-height: 20px;
-	font-weight: 600;
+	font-weight: normal;
 `;
 
 const SmallText = styled.div`

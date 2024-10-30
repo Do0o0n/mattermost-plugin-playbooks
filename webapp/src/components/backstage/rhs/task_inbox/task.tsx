@@ -139,11 +139,11 @@ const HeaderText = styled.div`
     white-space: nowrap;
     text-overflow: ellipsis;
     color: rgba(var(--center-channel-color-rgb), 0.72);
-    font-weight: 400;
+    
     margin: 0 4px;
     padding: 4px 0;
     a {
-        font-weight: 600;
+        font-weight: normal;
     }
 `;
 

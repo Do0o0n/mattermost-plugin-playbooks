@@ -229,7 +229,7 @@ const StatCard = styled.div`
 `;
 
 const StatText = styled.div`
-    font-weight: 600;
+    font-weight: normal;
     font-size: 14px;
     line-height: 20px;
     color: rgba(var(--center-channel-color-rgb), 0.72);

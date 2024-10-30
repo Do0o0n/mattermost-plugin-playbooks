@@ -12,10 +12,11 @@ const Container = styled.div`
     flex-direction: column;
     align-items: center;
     padding: 50px 20px;
+    font-weight: normal;
+    font-family: 'GraphikArabic';
 `;
 
 const Title = styled.h2`
-    font-family: Metropolis;
     font-size: 32px;
     line-height: 40px;
     color: var(--center-channel-color);
@@ -37,7 +38,7 @@ const DescriptionWarn = styled(Description)`
 
 const LinedSeparator = styled.div`
     > span {
-        font-weight: 600;
+        font-weight: normal;
         font-size: 12px;
         line-height: 10px;
         background: var(--center-channel-bg);

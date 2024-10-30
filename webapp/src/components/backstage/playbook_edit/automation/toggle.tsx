@@ -44,7 +44,7 @@ const RoundSwitch = styled.span<DisabledProps>`
     transition: .4s;
 
     // Outer rectangle
-    width: 40px;
+    width: 40px !important;
     height: 24px;
     border-radius: 14px;
     background: rgba(var(--center-channel-color-rgb), ${({disabled}) => (disabled ? '0.08' : '0.24')});
@@ -83,7 +83,7 @@ const Label = styled.label<DisabledProps>`
     display: flex;
     align-items: center;
     column-gap: 12px;
-    font-weight: inherit;
+    font-weight: normal;
     line-height: 16px;
     cursor: ${({disabled}) => (disabled ? 'default' : 'pointer')};
     margin-bottom: 0;
