@@ -32,7 +32,7 @@ const Badge = styled.div<BadgeProps>`
         switch (props.status) {
         case BadgeType.InProgress:
             return css`
-                background-color: var(--sidebar-text-active-border);
+                background-color: var(--sofa-bg-color);
             `;
         case BadgeType.Finished:
             return css`

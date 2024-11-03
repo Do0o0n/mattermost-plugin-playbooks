@@ -56,10 +56,12 @@ const SmallProfile = styled(Profile)`
 `;
 
 const SmallStatusBadge = styled(StatusBadge)`
-    font-size: 10px;
+    font-family: 'Graphik Arabic';
+    font-weight: inherit;
+    font-size: 14px;
     line-height: 16px;
-    height: 16px;
-    padding: 0 4px;
+    height: fit-content;
+    padding: 2px 8px;
     margin: 0;
 `;
 

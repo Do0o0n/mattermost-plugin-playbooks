@@ -28,14 +28,16 @@ interface Props {
 }
 
 const FollowButton = styled(TertiaryButton)`
-    font-family: 'Open Sans';
+    font-family: 'Graphik Arabic';
+    font-weight: inherit;
     font-size: 12px;
     height: 24px;
     padding: 0 10px;
 `;
 
 const UnfollowButton = styled(SecondaryButton)`
-    font-family: 'Open Sans';
+    font-family: 'Graphik Arabic';
+    font-weight: inherit;
     font-size: 12px;
     height: 24px;
     padding: 0 10px;

@@ -166,7 +166,7 @@ const RHSHome = () => {
                 <RHSTitleText>
                     {/* product name; don't translate */}
                     {/* eslint-disable-next-line formatjs/no-literal-string-in-jsx */}
-                    {'Playbooks'}
+                    {'قوالب العمل'}
                 </RHSTitleText>
             </RHSTitleRemoteRender>
             <RHSContainer>

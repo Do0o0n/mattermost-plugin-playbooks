@@ -1,6 +1,6 @@
 {
     "id": "playbooks",
-    "name": "Playbooks",
+    "name": "قوالب العمل",
     "description": "تمكّن خطط العمل من عمليات موثوقة وقابلة للتكرار لفِرقك باستخدام قواعد العمل والأتمتة والمراجعات.",
     "homepage_url": "https://github.com/mattermost/mattermost-plugin-playbooks/",
     "support_url": "https://github.com/mattermost/mattermost-plugin-playbooks/issues",

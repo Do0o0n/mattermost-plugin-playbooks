@@ -146,6 +146,8 @@ const RightWrapper = styled.div`
 `;
 
 const FinishRunButton = styled(TertiaryButton)`
+    font-family: 'Graphik Arabic';
+    font-weight: inherit;
     font-size: 12px;
     height: 32px;
     padding: 0 48px;
